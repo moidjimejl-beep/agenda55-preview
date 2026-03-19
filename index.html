@@ -50,7 +50,7 @@
    Font:   Brandon Grotesque
 ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+/* System fonts - no external dependency */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -67,7 +67,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Gill Sans', Arial, sans-serif;
   background: var(--dark);
   color: var(--cream);
   overflow-x: hidden;
@@ -441,7 +441,7 @@ footer {
 }
 
 /* ─── ANIMATIONS ─────────────────────────────── */
-.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+.fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.8s, transform 0.8s; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 </style>
