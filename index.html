@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>°AGENDA'55" — Lagoon 55 Luxury Catamaran Charter Croatia</title>
+<meta name="description" content="Experience the Adriatic on a Lagoon 55 luxury catamaran. 8 guests, professional crew, Hvar, Vis, Korčula. Crewed charter from Split, Croatia.">
+<meta name="keywords" content="Lagoon 55 charter Croatia, luxury catamaran Split, crewed sailing yacht Croatia, Hvar catamaran charter, Adriatic sailing holiday, Agenda 55">
+
+<!-- Open Graph -->
+<meta property="og:title" content="°AGENDA'55" — Luxury Catamaran Charter Croatia">
+<meta property="og:description" content="Discover the Art of Organized Luxury. Lagoon 55 crewed charter from Split, Croatia.">
+<meta property="og:type" content="website">
+
+<!-- Schema.org structured data for AI/SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Agenda 55 — Lagoon 55 Crewed Catamaran Charter",
+  "description": "Luxury crewed catamaran charter aboard the Lagoon 55 'Agenda 55', based in Split, Croatia. Professional captain and stewardess, 8 guests, all-inclusive experience on the Adriatic Sea.",
+  "touristType": ["Luxury", "Sailing", "Yacht Charter"],
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": ["Hvar", "Vis", "Korčula", "Brač", "Šibenik", "Kornati"]
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Agenda 55",
+    "sameAs": ["https://www.instagram.com/the_agenda_55", "https://www.tiktok.com/@the_agenda_55"]
+  },
+  "vehicle": {
+    "@type": "Vehicle",
+    "name": "Lagoon 55 Agenda 55",
+    "vehicleModelDate": "2023",
+    "description": "16.56m luxury catamaran, 4 en-suite cabins, 8 guests",
+    "numberOfDoors": 4
+  }
+}
+</script>
+
+<style>
+/* =============================================
+   AGENDA 55 — OFFICIAL BRAND COLORS
+   Dark:   #333132
+   Cream:  #FCFAED
+   Teal:   #00AAAB
+   Gold:   #F3DAAB
+   Grey:   #A7A9AC
+   Font:   Brandon Grotesque
+============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --dark: #333132;
+  --cream: #FCFAED;
+  --teal: #00AAAB;
+  --gold: #F3DAAB;
+  --grey: #A7A9AC;
+  --dark-80: rgba(51,49,50,0.8);
+  --dark-60: rgba(51,49,50,0.6);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--dark);
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ─── NAVIGATION ─────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  padding: 24px 48px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: all 0.4s;
+}
+nav.scrolled {
+  background: rgba(51,49,50,0.95);
+  backdrop-filter: blur(20px);
+  padding: 16px 48px;
+  border-bottom: 1px solid rgba(243,218,171,0.15);
+}
+.nav-logo {
+  font-size: 16px; font-weight: 500; letter-spacing: 5px;
+  color: var(--cream); text-decoration: none;
+}
+.nav-links { display: flex; gap: 40px; align-items: center; }
+.nav-links a {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(252,250,237,0.6); text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--cream); }
+.nav-book {
+  padding: 11px 28px; border: 1px solid var(--gold);
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); text-decoration: none; transition: all 0.3s;
+}
+.nav-book:hover { background: var(--gold); color: var(--dark); }
+
+/* ─── HERO ───────────────────────────────────── */
+.hero {
+  height: 100vh; position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  justify-content: flex-end; align-items: flex-start;
+  padding: 0 10% 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('hero.jpg');
+  background-size: cover; background-position: center 60%;
+  transform: scale(1.05);
+  transition: transform 8s ease;
+}
+.hero-bg.loaded { transform: scale(1); }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(51,49,50,0.1) 0%,
+    rgba(51,49,50,0.2) 40%,
+    rgba(51,49,50,0.75) 80%,
+    rgba(51,49,50,0.95) 100%
+  );
+}
+.hero-content { position: relative; z-index: 1; max-width: 700px; }
+.hero-eyebrow {
+  font-size: 10px; letter-spacing: 6px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 40px; height: 1px; background: var(--teal);
+}
+.hero-title {
+  font-size: clamp(56px, 9vw, 120px);
+  font-weight: 300; letter-spacing: 4px; line-height: 0.9;
+  color: var(--cream); margin-bottom: 28px;
+}
+.hero-title span { color: var(--gold); font-weight: 500; }
+.hero-subtitle {
+  font-size: 17px; font-weight: 300; line-height: 1.7;
+  color: rgba(252,250,237,0.75); max-width: 480px; margin-bottom: 48px;
+}
+.hero-actions { display: flex; gap: 20px; align-items: center; }
+.btn-primary {
+  padding: 18px 48px; background: var(--teal);
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--cream); text-decoration: none; transition: all 0.3s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #00c5c6; }
+.btn-ghost {
+  padding: 18px 48px; border: 1px solid rgba(252,250,237,0.3);
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(252,250,237,0.7); text-decoration: none; transition: all 0.3s;
+  display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--cream); color: var(--cream); }
+.hero-scroll {
+  position: absolute; bottom: 32px; right: 48px; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  cursor: pointer;
+}
+.hero-scroll span {
+  font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(252,250,237,0.4); writing-mode: vertical-rl;
+}
+.scroll-line {
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, rgba(252,250,237,0.4), transparent);
+}
+
+/* ─── STATS BAR ──────────────────────────────── */
+.stats-bar {
+  background: var(--cream); padding: 36px 10%;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-size: 40px; font-weight: 300; color: var(--dark);
+  letter-spacing: -1px; line-height: 1;
+}
+.stat-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--grey); margin-top: 6px;
+}
+.stat-divider { width: 1px; height: 48px; background: #e0ddd4; }
+
+/* ─── SECTIONS ───────────────────────────────── */
+section { padding: 100px 10%; }
+
+.section-label {
+  font-size: 10px; letter-spacing: 6px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px;
+}
+.section-label::before { content: ''; width: 32px; height: 1px; background: var(--teal); }
+
+/* ─── ABOUT ──────────────────────────────────── */
+.about { background: #2a2829; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
+.about-text h2 {
+  font-size: clamp(36px, 5vw, 60px); font-weight: 300; line-height: 1.15;
+  color: var(--cream); margin-bottom: 28px; letter-spacing: 1px;
+}
+.about-text h2 em { font-style: normal; color: var(--gold); }
+.about-text p {
+  font-size: 16px; line-height: 1.85; color: var(--grey);
+  margin-bottom: 20px; font-weight: 300;
+}
+.about-image-stack { position: relative; height: 560px; }
+.about-img-main {
+  position: absolute; top: 0; left: 0; right: 40px; bottom: 60px;
+  overflow: hidden;
+}
+.about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.about-img-secondary {
+  position: absolute; bottom: 0; right: 0; width: 55%; height: 52%;
+  overflow: hidden; border: 4px solid #2a2829;
+}
+.about-img-secondary img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── EXPERIENCE ─────────────────────────────── */
+.experience { background: var(--dark); }
+.experience-header { text-align: center; margin-bottom: 64px; }
+.experience-header h2 {
+  font-size: clamp(36px, 5vw, 56px); font-weight: 300;
+  color: var(--cream); margin-bottom: 16px;
+}
+.experience-header p { font-size: 16px; color: var(--grey); max-width: 560px; margin: 0 auto; }
+.experience-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  max-width: 1200px; margin: 0 auto;
+}
+.exp-card {
+  background: #2a2829; padding: 48px 36px;
+  border-top: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+.exp-card:hover { border-color: var(--teal); }
+.exp-icon {
+  font-size: 28px; margin-bottom: 24px;
+}
+.exp-title {
+  font-size: 16px; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--cream); margin-bottom: 16px;
+}
+.exp-text { font-size: 14px; line-height: 1.75; color: var(--grey); font-weight: 300; }
+
+/* ─── GALLERY ────────────────────────────────── */
+.gallery { padding: 0; background: var(--dark); }
+.gallery-header { padding: 80px 10% 48px; }
+.gallery-header h2 {
+  font-size: clamp(36px, 5vw, 56px); font-weight: 300; color: var(--cream);
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 4px;
+}
+.photo-item { overflow: hidden; cursor: pointer; position: relative; }
+.photo-item::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(51,49,50,0); transition: background 0.3s;
+}
+.photo-item:hover::after { background: rgba(0,170,171,0.15); }
+.photo-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s;
+}
+.photo-item:hover img { transform: scale(1.05); }
+.photo-item:first-child { grid-row: 1 / 3; }
+
+/* ─── VESSEL SPECS ───────────────────────────── */
+.specs { background: #2a2829; }
+.specs-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 0 auto; }
+.specs h2 {
+  font-size: clamp(32px, 4vw, 48px); font-weight: 300;
+  color: var(--cream); margin-bottom: 48px;
+}
+.specs-list { list-style: none; }
+.specs-list li {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 0; border-bottom: 1px solid rgba(252,250,237,0.08);
+  font-size: 14px;
+}
+.specs-list li:last-child { border-bottom: none; }
+.specs-list .spec-key { color: var(--grey); letter-spacing: 1px; font-weight: 300; }
+.specs-list .spec-val { color: var(--cream); font-weight: 400; text-align: right; }
+.toys-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.toy-item {
+  padding: 20px 24px; background: rgba(252,250,237,0.04);
+  border-left: 2px solid var(--teal);
+  font-size: 13px; color: var(--cream); font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* ─── CREW ───────────────────────────────────── */
+.crew { background: var(--dark); }
+.crew-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto; }
+.crew-card {
+  background: #2a2829; overflow: hidden;
+}
+.crew-photo { height: 360px; overflow: hidden; }
+.crew-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.crew-info { padding: 32px; }
+.crew-name {
+  font-size: 22px; font-weight: 400; color: var(--cream);
+  letter-spacing: 2px; margin-bottom: 4px;
+}
+.crew-role {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 20px;
+}
+.crew-bio { font-size: 13px; line-height: 1.75; color: var(--grey); font-weight: 300; }
+.crew-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.crew-tag {
+  padding: 6px 14px; border: 1px solid rgba(252,250,237,0.15);
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(252,250,237,0.5);
+}
+
+/* ─── DESTINATIONS ───────────────────────────── */
+.destinations { background: #2a2829; }
+.dest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
+.dest-card {
+  padding: 36px 28px; background: var(--dark);
+  border-bottom: 2px solid transparent; transition: border-color 0.3s;
+}
+.dest-card:hover { border-color: var(--gold); }
+.dest-num { font-size: 11px; letter-spacing: 4px; color: var(--grey); margin-bottom: 16px; }
+.dest-name { font-size: 24px; font-weight: 300; color: var(--cream); margin-bottom: 12px; }
+.dest-desc { font-size: 13px; line-height: 1.7; color: var(--grey); font-weight: 300; }
+
+/* ─── BOOKING CTA ────────────────────────────── */
+.booking {
+  background: var(--dark);
+  text-align: center; padding: 120px 10%;
+  position: relative; overflow: hidden;
+}
+.booking::before {
+  content: '';
+  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,170,171,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.booking-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+.booking h2 {
+  font-size: clamp(40px, 6vw, 72px); font-weight: 300;
+  color: var(--cream); line-height: 1.05; margin-bottom: 24px;
+}
+.booking h2 span { color: var(--teal); }
+.booking p {
+  font-size: 16px; color: var(--grey); line-height: 1.75;
+  margin-bottom: 48px; font-weight: 300;
+}
+.booking-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-wa {
+  padding: 18px 48px; background: #25D366;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: white; text-decoration: none; transition: all 0.3s;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.btn-wa:hover { background: #1da851; }
+.urgency {
+  margin-top: 32px; font-size: 12px; letter-spacing: 2px;
+  color: var(--gold); text-transform: uppercase;
+}
+.urgency span { font-weight: 600; }
+
+/* ─── FOOTER ─────────────────────────────────── */
+footer {
+  background: #1a1819; padding: 60px 10% 32px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px;
+  padding-bottom: 48px; border-bottom: 1px solid rgba(252,250,237,0.08);
+  margin-bottom: 32px;
+}
+.footer-brand h3 {
+  font-size: 20px; font-weight: 400; letter-spacing: 4px; color: var(--cream);
+  margin-bottom: 16px;
+}
+.footer-brand p { font-size: 13px; color: var(--grey); line-height: 1.7; font-weight: 300; max-width: 320px; }
+.footer-col h4 {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 20px;
+}
+.footer-col a {
+  display: block; font-size: 13px; color: var(--grey);
+  text-decoration: none; margin-bottom: 12px; transition: color 0.3s;
+  font-weight: 300;
+}
+.footer-col a:hover { color: var(--cream); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-bottom p { font-size: 11px; letter-spacing: 2px; color: rgba(252,250,237,0.25); }
+.social-links { display: flex; gap: 20px; }
+.social-links a {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(252,250,237,0.4); text-decoration: none; transition: color 0.3s;
+}
+.social-links a:hover { color: var(--cream); }
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image-stack { height: 380px; }
+  .experience-grid { grid-template-columns: 1fr 1fr; }
+  .crew-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 20px 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 0 6% 60px; }
+  section { padding: 72px 6%; }
+  .stats-bar { gap: 20px; flex-wrap: wrap; justify-content: center; }
+  .stat-divider { display: none; }
+  .experience-grid { grid-template-columns: 1fr; }
+  .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .photo-item:first-child { grid-row: 1; grid-column: 1 / 3; }
+  .specs-layout { grid-template-columns: 1fr; }
+  .crew-grid { grid-template-columns: 1fr; }
+  .dest-grid { grid-template-columns: 1fr; }
+  .booking-btns { flex-direction: column; align-items: center; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .about-image-stack { display: none; }
+}
+
+/* ─── ANIMATIONS ─────────────────────────────── */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+</style>
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">°AGENDA'55"</a>
+  <div class="nav-links">
+    <a href="#about">The Vessel</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#crew">Crew</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#book" class="nav-book">Book Charter</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content fade-in">
+    <p class="hero-eyebrow">Lagoon 55 · Split, Croatia · 2023</p>
+    <h1 class="hero-title">°AGENDA<br><span>'55"</span></h1>
+    <p class="hero-subtitle">Discover the Art of Organized Luxury. A Lagoon 55 catamaran experience crafted for those who value the finer things in life — and the freedom of the sea.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn-primary">Book Your Charter</a>
+      <a href="#about" class="btn-ghost">Explore the Vessel</a>
+    </div>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ─── STATS BAR ─── -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">16.56m</div><div class="stat-label">Length</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">En-Suite Cabins</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><div class="stat-num">8</div><div class="stat-label">Guests</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><div class="stat-num">2023</div><div class="stat-label">Year Built</div></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">Professional Crew</div></div>
+</div>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p class="section-label">The Vessel</p>
+      <h2>Where every journey is<br><em>purposeful</em></h2>
+      <p>Agenda 55 is a 2023 Lagoon 55 catamaran — a symbol of organised elegance, always moving forward with intention and grace. Based in Split, Croatia, she offers an unmatched crewed charter experience along the Dalmatian coast.</p>
+      <p>With four individually named and designed en-suite staterooms, a professional crew of two, and a comprehensive collection of water toys, Agenda 55 delivers the complete luxury sailing experience. Starlink connectivity, gourmet meals, and the finest Adriatic anchorages — all meticulously planned so you can simply enjoy.</p>
+      <p style="margin-top: 32px; font-size: 13px; letter-spacing: 1px; color: var(--teal);">°AGENDA'55" — Age Non-Disclosure. Where quality and experience never age.</p>
+    </div>
+    <div class="about-image-stack">
+      <div class="about-img-main">
+        <img src="exterior-01.jpg" alt="Agenda 55 Lagoon catamaran anchored in Croatia">
+      </div>
+      <div class="about-img-secondary">
+        <img src="cove.jpg" alt="Agenda 55 at anchor in a secluded Croatian cove">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY AGENDA 55 ─── -->
+<section class="experience" id="experience">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <div class="experience-header fade-in">
+      <p class="section-label" style="justify-content: center;">Why Agenda 55</p>
+      <h2>Not just a Lagoon 55.<br>The Lagoon 55.</h2>
+      <p>There are many Lagoon 55s available for charter in Croatia. Agenda 55 is built differently — outfitted, staffed, and operated to a standard that sets it apart from day one.</p>
+    </div>
+
+    <!-- KEY DIFFERENTIATORS — full width feature cards -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:2px;">
+      <div class="exp-card fade-in" style="padding:52px 44px; background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:20px;">01 — Privacy</div>
+        <div class="exp-title" style="font-size:22px; font-weight:300; text-transform:none; letter-spacing:0; margin-bottom:16px; color:var(--cream);">4 cabins. 8 guests. That's it.</div>
+        <div class="exp-text">Most charter catamarans cram 10–12 guests into 5–6 cabins. Agenda 55 carries a maximum of 8 guests across 4 en-suite staterooms — each uniquely named and designed. Your group has the boat. You don't share it with strangers.</div>
+      </div>
+      <div class="exp-card fade-in" style="padding:52px 44px; background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:20px;">02 — Water Toys</div>
+        <div class="exp-title" style="font-size:22px; font-weight:300; text-transform:none; letter-spacing:0; margin-bottom:16px; color:var(--cream);">The most equipped fleet in its class.</div>
+        <div class="exp-text">Williams SportJet 395 (100HP jet tender) · 2× Seabob F5SR · Air e-foil · 2× paddleboards · Wakeboard · Water skis · Donut · Banana · Advanced fishing gear · Snorkeling ×8. Most boats have a tender and two paddleboards. This is a different category.</div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px; margin-bottom:2px;">
+      <div class="exp-card fade-in" style="background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">03 — Crew</div>
+        <div class="exp-title" style="margin-bottom:12px;">Captain + Stewardess<br>+ Optional Chef</div>
+        <div class="exp-text">Two permanent professional crew. And if your group wants a private chef for the week, that's available on request. Your meals, your preferences, your pace.</div>
+      </div>
+      <div class="exp-card fade-in" style="background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">04 — Connectivity</div>
+        <div class="exp-title" style="margin-bottom:12px;">Starlink at sea.<br>Always on.</div>
+        <div class="exp-text">High-speed satellite internet throughout the Adriatic. Work remotely, stream, video call — or ignore it completely. The option exists. Most charter boats don't have it.</div>
+      </div>
+      <div class="exp-card fade-in" style="background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">05 — Built 2023</div>
+        <div class="exp-title" style="margin-bottom:12px;">New vessel.<br>No compromises.</div>
+        <div class="exp-text">Delivered in 2023, Agenda 55 has never been a bare-boat. She entered service as a fully crewed luxury charter from day one — fully equipped, fully maintained, and built to perform.</div>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+      <div class="exp-card fade-in" style="background:#1e1d1e;">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">06 — Entertainment</div>
+        <div class="exp-title" style="margin-bottom:12px;">Day and night.</div>
+        <div class="exp-text">Sound system across flybridge, cockpit, and saloon. Smart TV with Netflix and Disney+. PlayStation 4. Karaoke set. Guitar and synthesizer. Surround sound sunsets and late evenings at anchor — your soundtrack, your mood.</div>
+      </div>
+      <div class="exp-card fade-in" style="background:#1e1d1e; border-left: 2px solid var(--teal);">
+        <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">07 — The Name</div>
+        <div class="exp-title" style="margin-bottom:12px;">°AGENDA'55"</div>
+        <div class="exp-text">"Age Non-Disclosure." A boat that refuses to date itself — built with precision, operated with intent. The degree, minute, and second symbols in the name are coordinates. Every journey on Agenda 55 has a destination, and it's always worth arriving.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<div class="gallery" id="gallery">
+  <div class="gallery-header fade-in">
+    <p class="section-label">Life on Board</p>
+    <h2>The Adriatic Through Our Lens</h2>
+  </div>
+  <div class="photo-grid">
+    <div class="photo-item">
+      <img src="hero.jpg" alt="Aerial view of Agenda 55 catamaran anchored at a private island Croatia" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="exterior-02.jpg" alt="Agenda 55 sailing the Adriatic" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="exterior-03.jpg" alt="Lagoon 55 catamaran exterior Croatia" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="exterior-05.jpg" alt="Agenda 55 at anchor Croatia" loading="lazy">
+    </div>
+    <div class="photo-item">
+      <img src="exterior-08.jpg" alt="Catamaran charter Hvar Croatia" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- ─── VESSEL SPECS ─── -->
+<section class="specs" id="specs">
+  <div class="specs-layout">
+    <div class="fade-in">
+      <p class="section-label">Technical</p>
+      <h2>The Vessel at a Glance</h2>
+      <ul class="specs-list">
+        <li><span class="spec-key">Model</span><span class="spec-val">Lagoon 55</span></li>
+        <li><span class="spec-key">Year Built</span><span class="spec-val">2023</span></li>
+        <li><span class="spec-key">Length Overall</span><span class="spec-val">16.56 m</span></li>
+        <li><span class="spec-key">Beam</span><span class="spec-val">9.0 m</span></li>
+        <li><span class="spec-key">Draft</span><span class="spec-val">1.55 m</span></li>
+        <li><span class="spec-key">Engines</span><span class="spec-val">2 × Nanni 115 HP</span></li>
+        <li><span class="spec-key">Cruising Speed</span><span class="spec-val">8 knots</span></li>
+        <li><span class="spec-key">Guest Cabins</span><span class="spec-val">4 en-suite staterooms</span></li>
+        <li><span class="spec-key">Guest Capacity</span><span class="spec-val">8 guests</span></li>
+        <li><span class="spec-key">Crew</span><span class="spec-val">Captain + Stewardess</span></li>
+        <li><span class="spec-key">Sails</span><span class="spec-val">Full batten main + Code 0</span></li>
+        <li><span class="spec-key">Internet</span><span class="spec-val">Starlink</span></li>
+        <li><span class="spec-key">Generator</span><span class="spec-val">Yes</span></li>
+        <li><span class="spec-key">Watermaker</span><span class="spec-val">280 L/h</span></li>
+      </ul>
+    </div>
+    <div class="fade-in">
+      <p class="section-label">Water Toys</p>
+      <h2>Adventures Await</h2>
+      <div class="toys-grid">
+        <div class="toy-item">Williams SportJet 395<br><span style="color:var(--grey); font-size:11px;">100 HP · 4/5 persons</span></div>
+        <div class="toy-item">2× Seabob F5SR<br><span style="color:var(--grey); font-size:11px;">Underwater scooters</span></div>
+        <div class="toy-item">Air E-Foil<br><span style="color:var(--grey); font-size:11px;">Electric hydrofoil board</span></div>
+        <div class="toy-item">2× Paddleboard<br><span style="color:var(--grey); font-size:11px;">Stand-up paddleboards</span></div>
+        <div class="toy-item">Wakeboard<br><span style="color:var(--grey); font-size:11px;">Full equipment</span></div>
+        <div class="toy-item">Water Skis<br><span style="color:var(--grey); font-size:11px;">For all levels</span></div>
+        <div class="toy-item">Banana & Donut<br><span style="color:var(--grey); font-size:11px;">Towable rides</span></div>
+        <div class="toy-item">Snorkeling × 8<br><span style="color:var(--grey); font-size:11px;">Full sets for all guests</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CREW ─── -->
+<section class="crew" id="crew">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <p class="section-label fade-in">Your Crew</p>
+    <h2 class="fade-in" style="font-size: clamp(32px,5vw,52px); font-weight:300; margin-bottom:48px;">In expert hands,<br>from day one.</h2>
+    <div class="crew-grid">
+      <div class="crew-card fade-in">
+        <div class="crew-photo">
+          <img src="exterior-10.jpg" alt="Captain Vedran Šubić — Agenda 55">
+        </div>
+        <div class="crew-info">
+          <div class="crew-name">Vedran Šubić</div>
+          <div class="crew-role">Captain · Yachtmaster</div>
+          <div class="crew-bio">Over 10 years on the water with 30,000+ nautical miles across the Mediterranean, Caribbean, and Atlantic. Fluent in English, German, and Croatian. Expert in yacht maintenance and hidden bay discovery.</div>
+          <div class="crew-tags">
+            <span class="crew-tag">Yachtmaster</span>
+            <span class="crew-tag">First Aid & CPR</span>
+            <span class="crew-tag">English · German</span>
+          </div>
+        </div>
+      </div>
+      <div class="crew-card fade-in">
+        <div class="crew-photo">
+          <img src="exterior-03.jpg" alt="Stewardess Katarina Matić — Agenda 55">
+        </div>
+        <div class="crew-info">
+          <div class="crew-name">Katarina Matić</div>
+          <div class="crew-role">Stewardess · Hostess</div>
+          <div class="crew-bio">Certified stewardess, fitness coach, and swimming instructor. Expert in guest preferences, cultural diversity, and creating active wellness experiences. Two freshly prepared meals daily, tailored to you.</div>
+          <div class="crew-tags">
+            <span class="crew-tag">STCW D2</span>
+            <span class="crew-tag">Food & Hygiene L2</span>
+            <span class="crew-tag">English · Croatian</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DESTINATIONS ─── -->
+<section class="destinations" id="destinations">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <p class="section-label fade-in">Adriatic</p>
+    <h2 class="fade-in" style="font-size: clamp(32px,5vw,52px); font-weight:300; max-width:600px; line-height:1.15;">Croatia's most extraordinary islands</h2>
+    <div class="dest-grid">
+      <div class="dest-card fade-in">
+        <div class="dest-num">01</div>
+        <div class="dest-name">Hvar</div>
+        <div class="dest-desc">The jewel of the Dalmatian coast. Lavender fields, lively harbour nights, secluded coves, and the best sunsets in the Adriatic.</div>
+      </div>
+      <div class="dest-card fade-in">
+        <div class="dest-num">02</div>
+        <div class="dest-name">Vis</div>
+        <div class="dest-desc">Croatia's remotest and most preserved island. Crystal-clear bays, the famous Blue Cave, untouched nature, and authentic island life.</div>
+      </div>
+      <div class="dest-card fade-in">
+        <div class="dest-num">03</div>
+        <div class="dest-name">Korčula</div>
+        <div class="dest-desc">The birthplace of Marco Polo. A walled medieval town, excellent local wines, and some of the most dramatic coastline in the Adriatic.</div>
+      </div>
+      <div class="dest-card fade-in">
+        <div class="dest-num">04</div>
+        <div class="dest-name">Brač</div>
+        <div class="dest-desc">Home to Zlatni Rat — Croatia's most iconic beach — and quiet villages where time moves at the pace of the sea.</div>
+      </div>
+      <div class="dest-card fade-in">
+        <div class="dest-num">05</div>
+        <div class="dest-name">Kornati</div>
+        <div class="dest-desc">A national park of 89 islands. Wild, unspoiled, and breathtaking — the kind of landscape that reminds you why you came.</div>
+      </div>
+      <div class="dest-card fade-in">
+        <div class="dest-num">06</div>
+        <div class="dest-name">Šibenik</div>
+        <div class="dest-desc">UNESCO heritage city, gateway to the Krka waterfalls, and a favourite among captains who know where to anchor for the view.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BOOKING CTA ─── -->
+<section class="booking" id="book">
+  <div class="booking-inner fade-in">
+    <p class="section-label" style="justify-content: center;">2026 Season</p>
+    <h2>The Adriatic is<br><span>calling.</span></h2>
+    <p>Agenda 55 is available for crewed charter from Split, Croatia. 7-night charters, Saturday to Saturday. Managed by Adriatic Sailing — check availability and book through your preferred broker, or reach us directly.</p>
+    <div class="booking-btns">
+      <a href="https://wa.me/385912264393?text=Hi%2C%20I%27m%20interested%20in%20chartering%20Agenda%2055.%20Could%20you%20share%20availability%3F" class="btn-wa" target="_blank" style="background:#25D366;">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Captain
+      </a>
+      <a href="https://www.adriaticsailing.com" class="btn-ghost" target="_blank">Check Availability</a>
+    </div>
+    <p class="urgency" style="margin-top:28px; font-size:11px; color:var(--grey);">Available through <a href="https://www.adriaticsailing.com" target="_blank" style="color:var(--teal); text-decoration:none;">Adriatic Sailing</a> · @the_agenda_55</p>
+  </div>
