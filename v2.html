@@ -71,7 +71,7 @@ section{padding:96px 10%}
 .crew-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:48px auto 0}
 .crew-card{overflow:hidden}
 .crew-photo{height:340px;overflow:hidden}
-.crew-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.crew-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}
 .crew-info{padding:28px 24px;background:var(--sand)}
 .crew-name{font-size:20px;font-weight:600;color:var(--navy);margin-bottom:4px}
 .crew-role{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
@@ -229,16 +229,74 @@ footer p{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.25);text-tran
   </div>
 </section>
 
-<section id="gallery" style="background:#fff">
-  <p class="section-label label fade-in">Gallery</p>
-  <h2 class="fade-in" style="font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--navy);margin-bottom:4px">Life on Board</h2>
-  <div class="gallery-grid">
-    <div class="gitem"><img src="hero.jpg" alt="Aerial view of Agenda 55 at a private island Croatia"></div>
-    <div class="gitem"><img src="exterior-02.jpg" alt="Agenda 55 sailing Croatia"></div>
-    <div class="gitem"><img src="hana-final.jpg" alt="Lagoon 55 exterior Croatia"></div>
-    <div class="gitem"><img src="exterior-05.jpg" alt="Catamaran at anchor Adriatic"></div>
-    <div class="gitem"><img src="exterior-08.jpg" alt="Agenda 55 charter Hvar"></div>
+<section id="gallery" style="background:#fff;padding:0">
+  <div style="padding:64px 10% 40px">
+    <p class="label" style="margin-bottom:12px">Gallery</p>
+    <h2 style="font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--navy)">Life on Board</h2>
   </div>
+
+  <!-- FEATURED HERO IMAGE -->
+  <div style="max-width:100%;overflow:hidden;cursor:pointer" onclick="openLightbox(0)">
+    <img src="drone-sunset.jpg" alt="Agenda 55 at sunset anchorage Croatia" style="width:100%;height:560px;object-fit:cover;object-position:center;display:block;transition:transform .6s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+
+  <!-- 4-PHOTO GRID -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin-top:4px">
+    <div style="overflow:hidden;height:240px;cursor:pointer" onclick="openLightbox(1)">
+      <img src="hero.jpg" alt="Aerial view Agenda 55 private island" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="overflow:hidden;height:240px;cursor:pointer" onclick="openLightbox(2)">
+      <img src="drone-island.jpg" alt="Top-down Agenda 55 at island" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="overflow:hidden;height:240px;cursor:pointer" onclick="openLightbox(3)">
+      <img src="interior-cabin.jpg" alt="Master cabin Agenda 55" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="overflow:hidden;height:240px;cursor:pointer;position:relative" onclick="openLightbox(4)">
+      <img src="interior-vip.jpg" alt="VIP cabin Agenda 55" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:12px;right:12px;background:rgba(27,42,74,.85);color:#fff;font-size:10px;letter-spacing:2px;padding:8px 14px;pointer-events:none">VIEW ALL ↗</div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:9999;align-items:center;justify-content:center;flex-direction:column">
+    <button onclick="closeLightbox()" style="position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer;line-height:1">×</button>
+    <button onclick="prevImg()" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.6);font-size:48px;cursor:pointer;line-height:1">‹</button>
+    <button onclick="nextImg()" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.6);font-size:48px;cursor:pointer;line-height:1">›</button>
+    <img id="lightbox-img" src="" style="max-height:88vh;max-width:90vw;object-fit:contain">
+    <div id="lightbox-counter" style="color:rgba(255,255,255,.4);font-size:11px;letter-spacing:3px;margin-top:16px"></div>
+  </div>
+
+  <script>
+  const galleryImgs = [
+    {src:'drone-sunset.jpg',alt:'Agenda 55 at sunset'},
+    {src:'hero.jpg',alt:'Aerial view'},
+    {src:'drone-island.jpg',alt:'Private island anchorage'},
+    {src:'interior-cabin.jpg',alt:'Master cabin'},
+    {src:'interior-vip.jpg',alt:'VIP cabin'},
+    {src:'exterior-01.jpg',alt:'Exterior'},
+    {src:'exterior-02.jpg',alt:'Sailing'},
+    {src:'cove.jpg',alt:'Secluded cove'},
+    {src:'drone-toys.jpg',alt:'Water toys'},
+    {src:'exterior-05.jpg',alt:'At anchor'}
+  ];
+  let curIdx=0;
+  function openLightbox(i){curIdx=i;document.getElementById('lightbox').style.display='flex';updateLightbox();}
+  function closeLightbox(){document.getElementById('lightbox').style.display='none';}
+  function prevImg(){curIdx=(curIdx-1+galleryImgs.length)%galleryImgs.length;updateLightbox();}
+  function nextImg(){curIdx=(curIdx+1)%galleryImgs.length;updateLightbox();}
+  function updateLightbox(){
+    document.getElementById('lightbox-img').src=galleryImgs[curIdx].src;
+    document.getElementById('lightbox-counter').textContent=(curIdx+1)+' / '+galleryImgs.length;
+  }
+  document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+  document.addEventListener('keydown',function(e){
+    if(document.getElementById('lightbox').style.display==='flex'){
+      if(e.key==='ArrowLeft')prevImg();
+      if(e.key==='ArrowRight')nextImg();
+      if(e.key==='Escape')closeLightbox();
+    }
+  });
+  </script>
 </section>
 
 <section id="specs" style="background:var(--sand)">
@@ -283,7 +341,7 @@ footer p{font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.25);text-tran
   <h2 class="fade-in" style="font-size:clamp(28px,4vw,44px);font-weight:300;color:var(--navy)">In expert hands from day one.</h2>
   <div class="crew-grid">
     <div class="crew-card fade-in">
-      <div class="crew-photo"><img src="captain-meteora.png" alt="Captain Vedran Šubić"></div>
+      <div class="crew-photo"><img src="captain-final.png" alt="Captain Vedran Šubić"></div>
       <div class="crew-info">
         <div class="crew-name">Vedran Šubić</div>
         <div class="crew-role">Captain · Yachtmaster</div>
