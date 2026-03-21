@@ -507,7 +507,7 @@ footer {
         <img src="exterior-01.jpg" alt="Agenda 55 Lagoon catamaran anchored in Croatia">
       </div>
       <div class="about-img-secondary">
-        <img src="cove.jpg" alt="Agenda 55 at anchor in a secluded Croatian cove">
+        <img src="img-02.jpg" alt="Agenda 55 at anchor in a secluded Croatian cove">
       </div>
     </div>
   </div>
@@ -618,24 +618,46 @@ footer {
     <p class="section-label">Life on Board</p>
     <h2>The Adriatic Through Our Lens</h2>
   </div>
-  <div class="photo-grid">
-    <div class="photo-item">
-      <img src="hero.jpg" alt="Aerial view of Agenda 55 catamaran anchored at a private island Croatia" loading="lazy">
+
+  <div style="max-width:100%;overflow:hidden;cursor:pointer" onclick="openLightboxV1(0)">
+    <img src="drone-sunset.jpg" alt="Agenda 55 at golden hour Croatia" style="width:100%;height:520px;object-fit:cover;object-position:center 70%;display:block;transition:transform .6s" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin-top:4px">
+    <div style="overflow:hidden;height:220px;cursor:pointer" onclick="openLightboxV1(1)">
+      <img src="hero.jpg" alt="Aerial view private island" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div class="photo-item">
-      <img src="exterior-02.jpg" alt="Agenda 55 sailing the Adriatic" loading="lazy">
+    <div style="overflow:hidden;height:220px;cursor:pointer" onclick="openLightboxV1(2)">
+      <img src="interior-master.jpg" alt="Master cabin Agenda 55" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div class="photo-item">
-      <img src="hana-final.jpg" alt="Lagoon 55 catamaran exterior Croatia" loading="lazy">
+    <div style="overflow:hidden;height:220px;cursor:pointer" onclick="openLightboxV1(3)">
+      <img src="interior-salon.jpg" alt="Salon Agenda 55" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
     </div>
-    <div class="photo-item">
-      <img src="exterior-05.jpg" alt="Agenda 55 at anchor Croatia" loading="lazy">
-    </div>
-    <div class="photo-item">
-      <img src="exterior-08.jpg" alt="Catamaran charter Hvar Croatia" loading="lazy">
+    <div style="overflow:hidden;height:220px;cursor:pointer;position:relative" onclick="openLightboxV1(4)">
+      <img src="interior-bathroom.jpg" alt="En-suite bathroom" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;bottom:12px;right:12px;background:rgba(8,8,8,.85);color:var(--gold);font-size:10px;letter-spacing:2px;padding:8px 14px;pointer-events:none">VIEW ALL ↗</div>
     </div>
   </div>
-</div>
+
+  <div id="lb-v1" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:9999;align-items:center;justify-content:center;flex-direction:column">
+    <button onclick="closeLbV1()" style="position:absolute;top:20px;right:28px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer">×</button>
+    <button onclick="prevV1()" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.6);font-size:48px;cursor:pointer">‹</button>
+    <button onclick="nextV1()" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.6);font-size:48px;cursor:pointer">›</button>
+    <img id="lb-v1-img" src="" style="max-height:88vh;max-width:90vw;object-fit:contain">
+    <div id="lb-v1-cnt" style="color:rgba(255,255,255,.4);font-size:11px;letter-spacing:3px;margin-top:16px"></div>
+  </div>
+  <script>
+  const gV1=[{src:'drone-sunset.jpg'},{src:'hero.jpg'},{src:'interior-master.jpg'},{src:'interior-salon.jpg'},{src:'interior-bathroom.jpg'},{src:'drone-wide.jpg'},{src:'cove.jpg'},{src:'exterior-01.jpg'},{src:'exterior-02.jpg'},{src:'drone-deck.jpg'}];
+  let cV1=0;
+  function openLightboxV1(i){cV1=i;document.getElementById('lb-v1').style.display='flex';updV1();}
+  function closeLbV1(){document.getElementById('lb-v1').style.display='none';}
+  function prevV1(){cV1=(cV1-1+gV1.length)%gV1.length;updV1();}
+  function nextV1(){cV1=(cV1+1)%gV1.length;updV1();}
+  function updV1(){document.getElementById('lb-v1-img').src=gV1[cV1].src;document.getElementById('lb-v1-cnt').textContent=(cV1+1)+' / '+gV1.length;}
+  document.getElementById('lb-v1').addEventListener('click',function(e){if(e.target===this)closeLbV1();});
+  document.addEventListener('keydown',function(e){if(document.getElementById('lb-v1').style.display==='flex'){if(e.key==='ArrowLeft')prevV1();if(e.key==='ArrowRight')nextV1();if(e.key==='Escape')closeLbV1();}});
+  </script>
+</div></div>
 
 <!-- ─── VESSEL SPECS ─── -->
 <section class="specs" id="specs">
