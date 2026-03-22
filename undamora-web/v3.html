@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unda Mora — V3 · Text-First Apple Style</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1A3A5C;--teal:#00AAAB;--white:#FFFFFF;--off:#F7F7F5;--grey:#8A8A88;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV — Apple style ultra minimal */
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:0 60px;height:52px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo svg{width:24px;height:15px}
+.logo span{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--navy);letter-spacing:.5px}
+.navl{display:flex;gap:36px}
+.navl a{font-size:12px;color:var(--grey);text-decoration:none;transition:color .2s}
+.navl a:hover{color:var(--navy)}
+.navl .cta{color:var(--teal)}
+
+/* HERO — TEXT DOMINANT, Apple style */
+.hero{min-height:100vh;padding-top:52px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-left:40px;padding-right:40px;background:var(--white);position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:1px;height:80px;background:linear-gradient(to bottom,rgba(26,58,92,.2),transparent)}
+.hero-eyebrow{font-size:14px;color:var(--teal);letter-spacing:.5px;margin-bottom:28px;font-weight:300}
+.hero-title{font-family:var(--serif);font-size:clamp(72px,12vw,160px);font-style:italic;font-weight:300;color:var(--navy);line-height:.88;letter-spacing:-3px;margin-bottom:40px;max-width:900px}
+.hero-sub{font-size:19px;color:var(--grey);max-width:480px;line-height:1.7;margin-bottom:60px;font-weight:300}
+.hero-actions{display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
+.btn-p{padding:16px 44px;background:var(--navy);color:white;font-size:13px;font-weight:500;letter-spacing:.5px;text-decoration:none;border-radius:0;transition:background .3s;display:inline-block}
+.btn-p:hover{background:#0f2a45}
+.btn-g{padding:16px 32px;border:1px solid rgba(26,58,92,.25);font-size:13px;color:var(--navy);text-decoration:none;transition:all .3s;display:inline-block}
+.btn-g:hover{border-color:var(--navy)}
+
+/* SCROLL IMAGE — cinematic */
+.cin{margin:80px 0 0;width:100%;height:60vh;overflow:hidden;position:relative}
+.cin img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.cin-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(255,255,255,1) 100%)}
+
+/* SERVICES — Apple card style */
+.svcs{padding:80px 40px 120px;max-width:1100px;margin:0 auto}
+.svcs-label{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);text-align:center;margin-bottom:16px}
+.svcs-title{font-family:var(--serif);font-size:clamp(36px,5vw,60px);font-style:italic;font-weight:300;color:var(--navy);text-align:center;margin-bottom:64px;letter-spacing:-.5px}
+.svcs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(26,58,92,.06)}
+.sc{background:white;padding:48px 36px;transition:background .3s}
+.sc:hover{background:var(--off)}
+.sc-num{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.sc-t{font-family:var(--serif);font-size:24px;font-style:italic;font-weight:300;color:var(--navy);margin-bottom:14px;line-height:1.2}
+.sc-d{font-size:13px;color:var(--grey);line-height:1.75;margin-bottom:20px}
+.sc-l{font-size:12px;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.sc-l::after{content:'→';transition:transform .2s}
+.sc-l:hover::after{transform:translateX(4px)}
+
+/* PHOTO SECTION — staggered */
+.photos{padding:0 40px 120px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:4px}
+.ph{overflow:hidden;height:400px}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.ph:hover img{transform:scale(1.04)}
+.ph2-stack{display:grid;gap:4px}
+.ph2-stack .ph{height:195px}
+
+/* QUOTE — Apple Keynote style */
+.quote{padding:120px 40px;text-align:center}
+.quote-inner{max-width:760px;margin:0 auto}
+.quote-mark{font-family:var(--serif);font-size:80px;font-style:italic;color:var(--teal);line-height:.5;margin-bottom:32px;opacity:.3}
+.quote-text{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-style:italic;font-weight:300;color:var(--navy);line-height:1.35;margin-bottom:32px}
+.quote-attr{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--grey)}
+
+/* NUMBERS — Apple specs style */
+.nums{background:var(--off);padding:80px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background-color:rgba(26,58,92,.06)}
+.num-item{background:var(--off);padding:48px 32px;text-align:center}
+.num-n{font-family:var(--serif);font-size:56px;font-style:italic;font-weight:300;color:var(--navy);line-height:1}
+.num-l{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);margin-top:8px}
+
+/* CTA — Apple end-of-page style */
+.cta{padding:160px 40px;text-align:center;background:var(--white)}
+.cta-inner{max-width:600px;margin:0 auto}
+.cta-eyebrow{font-size:14px;color:var(--teal);margin-bottom:24px}
+.cta h2{font-family:var(--serif);font-size:clamp(52px,8vw,100px);font-style:italic;font-weight:300;color:var(--navy);line-height:.9;letter-spacing:-2px;margin-bottom:28px}
+.cta p{font-size:16px;color:var(--grey);line-height:1.75;margin-bottom:52px;font-weight:300}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:#25D366;color:white;font-size:13px;font-weight:500;text-decoration:none;transition:background .3s}
+.btn-wa:hover{background:#1da851}
+.btn-o{display:inline-block;padding:16px 40px;border:1px solid rgba(26,58,92,.3);color:var(--navy);font-size:13px;text-decoration:none;transition:all .3s}
+.btn-o:hover{border-color:var(--navy);background:var(--navy);color:white}
+
+/* FOOTER */
+footer{padding:40px 60px;border-top:1px solid rgba(26,58,92,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer p{font-size:11px;color:var(--grey)}
+.fsoc{display:flex;gap:20px}
+.fsoc a{font-size:11px;color:var(--grey);text-decoration:none;transition:color .2s}
+.fsoc a:hover{color:var(--navy)}
+
+.fi{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.fi.v{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){nav{padding:0 24px}.navl{display:none}.hero{padding:80px 24px 60px}.svcs{padding:60px 24px 80px}.svcs-grid{grid-template-columns:1fr}.photos{padding:0 24px 80px;grid-template-columns:1fr}.ph,.ph2-stack .ph{height:240px}.ph2-stack{display:block}.nums{grid-template-columns:1fr 1fr}.cta{padding:100px 24px}.quote{padding:80px 24px}footer{padding:32px 24px;flex-direction:column;gap:16px;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <svg viewBox="0 0 32 20" fill="none"><path d="M0 14C4 14 4 6 8 6C12 6 12 14 16 14C20 14 20 6 24 6C28 6 28 14 32 14" stroke="#00AAAB" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <span>Unda Mora</span>
+  </a>
+  <div class="navl">
+    <a href="#svcs">Experiences</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#cta">About</a>
+    <a href="#cta" class="cta">Enquire</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Boutique yacht charter · Split, Croatia</p>
+  <h1 class="hero-title">The Adriatic,<br><em>properly</em><br>experienced.</h1>
+  <p class="hero-sub">A small, careful agency. We find the right boat, the right crew, and the right week — tailored to you.</p>
+  <div class="hero-actions">
+    <a href="#cta" class="btn-p">Plan Your Voyage</a>
+    <a href="#svcs" class="btn-g">Our Experiences</a>
+  </div>
+</section>
+
+<div class="cin">
+  <img src="img-03.jpg" alt="Sailing yacht Croatia aerial">
+  <div class="cin-overlay"></div>
+</div>
+
+<section class="svcs" id="svcs">
+  <p class="svcs-label fi">What we offer</p>
+  <h2 class="svcs-title fi">Five ways to be on the water.</h2>
+  <div class="svcs-grid">
+    <div class="sc fi"><div class="sc-num">01</div><div class="sc-t">Private Crewed Charter</div><div class="sc-d">Your boat, your itinerary, your pace. We source the right vessel and ensure the crew matches your expectations — not a standard package.</div><a href="#cta" class="sc-l">Enquire</a></div>
+    <div class="sc fi"><div class="sc-num">02</div><div class="sc-t">Vegan Sailing Week</div><div class="sc-d">Plant-based fine dining at sea. Matea at the helm, Marina in the galley. A week of sailing unlike anything else on the Adriatic coast.</div><a href="#cta" class="sc-l">Enquire</a></div>
+    <div class="sc fi"><div class="sc-num">03</div><div class="sc-t">Bike & Sail Croatia</div><div class="sc-d">Island mornings on two wheels. Afternoons on the water. One of the most complete active weeks in Dalmatia.</div><a href="#cta" class="sc-l">Enquire</a></div>
+    <div class="sc fi"><div class="sc-num">04</div><div class="sc-t">Team & Corporate</div><div class="sc-d">The sea connects people. We design team weeks and executive retreats your group will talk about for years.</div><a href="#cta" class="sc-l">Enquire</a></div>
+    <div class="sc fi"><div class="sc-num">05</div><div class="sc-t">Yoga at Sea</div><div class="sc-d">Morning practice on deck at anchor. Salt air, silence, and the kind of reset that doesn't require a spa.</div><a href="#cta" class="sc-l">Enquire</a></div>
+    <div class="sc fi" style="background:var(--navy)"><div class="sc-num" style="color:rgba(0,170,171,.7)">→</div><div class="sc-t" style="color:white">Tailor-made?</div><div class="sc-d" style="color:rgba(255,255,255,.5)">Tell us what you're looking for. We'll find it or build it for you.</div><a href="#cta" class="sc-l" style="color:white">Start a conversation</a></div>
+  </div>
+</section>
+
+<div class="photos" id="gallery">
+  <div class="ph fi"><img src="img-09.jpg" alt="Two catamarans anchorage"></div>
+  <div class="ph2-stack">
+    <div class="ph fi"><img src="img-06.jpg" alt="Adriatic sunset"></div>
+    <div class="ph fi"><img src="img-07.jpg" alt="Marina fleet Šibenik"></div>
+  </div>
+</div>
+
+<section class="quote">
+  <div class="quote-inner fi">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">The wave of the sea — small enough to know every anchorage. Experienced enough to know what matters on a week at sea.</p>
+    <p class="quote-attr">Unda Mora · Split, Croatia</p>
+  </div>
+</section>
+
+<div class="nums">
+  <div class="num-item fi"><div class="num-n">15+</div><div class="num-l">Years on the Adriatic</div></div>
+  <div class="num-item fi"><div class="num-n">5</div><div class="num-l">Charter Experiences</div></div>
+  <div class="num-item fi"><div class="num-n">100+</div><div class="num-l">Islands Explored</div></div>
+  <div class="num-item fi"><div class="num-n">May–Oct</div><div class="num-l">2026 Season</div></div>
+</div>
+
+<section class="cta" id="cta">
+  <div class="cta-inner fi">
+    <p class="cta-eyebrow">2026 Season</p>
+    <h2>Let's talk<br>about your<br>week.</h2>
+    <p>Tell us about your group, your dates, and what kind of experience you're looking for. We'll come back with a proposal — not a brochure.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/385912264393?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20charter%20with%20Unda%20Mora." class="btn-wa" target="_blank">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:hello@undamora.com" class="btn-o">Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Unda Mora · Boutique Charter Agency · Split, Croatia</p>
+  <div class="fsoc">
+    <a href="https://instagram.com/the_agenda_55" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@the_agenda_55" target="_blank">TikTok</a>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

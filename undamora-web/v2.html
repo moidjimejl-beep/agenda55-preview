@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unda Mora — V2 · Split Hero Layout</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1A3A5C;--teal:#00AAAB;--white:#FFFFFF;--off:#F7F7F5;--grey:#8A8A88;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:#111;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:24px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(26,58,92,.06);transition:padding .3s}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:28px;height:18px}
+.logo span{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--navy)}
+.navl{display:flex;gap:40px;align-items:center}
+.navl a{font-size:12px;letter-spacing:.5px;color:var(--grey);text-decoration:none;transition:color .2s}
+.navl a:hover{color:var(--navy)}
+.nav-cta{padding:10px 28px;background:var(--navy);color:white;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background .3s}
+.nav-cta:hover{background:#0f2a45}
+
+/* HERO — SPLIT */
+.hero{height:100vh;padding-top:64px;display:grid;grid-template-columns:1fr 1fr}
+.hero-l{display:flex;flex-direction:column;justify-content:center;padding:60px 60px 60px 60px;background:var(--white)}
+.hero-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--teal);margin-bottom:32px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--teal)}
+.hero-title{font-family:var(--serif);font-size:clamp(56px,7vw,100px);font-style:italic;font-weight:300;color:var(--navy);line-height:.9;letter-spacing:-2px;margin-bottom:32px}
+.hero-sub{font-size:16px;color:var(--grey);max-width:400px;line-height:1.8;margin-bottom:48px;font-weight:300}
+.hero-btns{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn-p{padding:16px 44px;background:var(--navy);color:white;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .3s;display:inline-block}
+.btn-p:hover{background:#0f2a45}
+.btn-t{font-size:13px;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,58,92,.3);padding-bottom:3px}
+.hero-r{overflow:hidden;position:relative}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-r-badge{position:absolute;bottom:32px;left:32px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);padding:16px 20px}
+.hero-r-badge .n{font-family:var(--serif);font-size:28px;font-style:italic;color:var(--navy);line-height:1}
+.hero-r-badge .l{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-top:4px}
+
+/* TICKER */
+.ticker{background:var(--navy);padding:14px 0;overflow:hidden}
+.ticker-track{display:flex;white-space:nowrap;animation:tick 22s linear infinite}
+.ti{font-size:11px;font-weight:400;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.6);padding:0 32px}
+.ti.dot{color:var(--teal);font-size:8px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATEMENT */
+.stmt{padding:120px 60px;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;max-width:1300px;margin:0 auto}
+.stmt-l .label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.stmt-l h2{font-family:var(--serif);font-size:clamp(36px,4vw,56px);font-style:italic;font-weight:300;color:var(--navy);line-height:1.2}
+.stmt-r p{font-size:16px;color:var(--grey);line-height:1.85;font-weight:300}
+.stmt-r .divider{width:48px;height:2px;background:var(--teal);margin:28px 0}
+
+/* SERVICES — HORIZONTAL SCROLL */
+.svcs{padding:80px 0 100px;overflow:hidden}
+.svcs-header{padding:0 60px;margin-bottom:48px;display:flex;justify-content:space-between;align-items:flex-end}
+.svcs-header h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-style:italic;font-weight:300;color:var(--navy)}
+.svcs-header a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);text-decoration:none;border-bottom:1px solid rgba(26,58,92,.2);padding-bottom:2px}
+.svcs-scroll{display:flex;gap:2px;padding:0 60px;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.svcs-scroll::-webkit-scrollbar{display:none}
+.sv{flex:0 0 340px;background:var(--off);padding:44px 36px;border-top:2px solid transparent;transition:border-color .3s;cursor:pointer}
+.sv:hover{border-color:var(--teal)}
+.sv-num{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.sv-t{font-family:var(--serif);font-size:24px;font-style:italic;font-weight:300;color:var(--navy);margin-bottom:14px}
+.sv-d{font-size:13px;color:var(--grey);line-height:1.75;margin-bottom:20px}
+.sv-l{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(26,58,92,.2);padding-bottom:2px}
+
+/* PHOTO GRID */
+.pgrid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:360px 280px;gap:3px}
+.pg{overflow:hidden;cursor:pointer}
+.pg img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.pg:hover img{transform:scale(1.04)}
+.pg:first-child{grid-row:1/3}
+
+/* PHILOSOPHY */
+.phil{padding:120px 60px;background:var(--navy);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.phil-l{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-style:italic;font-weight:300;color:white;line-height:1.3}
+.phil-r p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:24px}
+.phil-teal-line{width:40px;height:2px;background:var(--teal);margin-bottom:28px}
+
+/* ENQUIRE */
+.enq{padding:140px 60px;text-align:center}
+.enq-inner{max-width:640px;margin:0 auto}
+.enq-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--teal);margin-bottom:28px}
+.enq h2{font-family:var(--serif);font-size:clamp(48px,7vw,88px);font-style:italic;font-weight:300;color:var(--navy);line-height:.9;letter-spacing:-2px;margin-bottom:24px}
+.enq p{font-size:16px;color:var(--grey);line-height:1.75;margin-bottom:52px}
+.enq-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:#25D366;color:white;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .3s}
+.btn-wa:hover{background:#1da851}
+.btn-o{display:inline-block;padding:16px 40px;border:1px solid var(--navy);color:var(--navy);font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.btn-o:hover{background:var(--navy);color:white}
+
+/* FOOTER */
+footer{padding:60px;background:var(--navy);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+footer p{font-size:11px;letter-spacing:1px;color:rgba(255,255,255,.25)}
+.fsoc{display:flex;gap:24px}
+.fsoc a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.fsoc a:hover{color:white}
+
+.fi{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.fi.v{opacity:1;transform:translateY(0)}
+
+@media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-r{display:none}.stmt{grid-template-columns:1fr}.phil{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:20px 24px}.navl{display:none}.hero-l{padding:40px 24px 60px}.stmt,.enq,.phil{padding:80px 24px}.svcs-header,.svcs-scroll{padding:0 24px}.pgrid{grid-template-columns:1fr;grid-template-rows:auto}.pg:first-child{grid-row:1}.pg{height:240px}footer{padding:40px 24px;flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <svg viewBox="0 0 32 20" fill="none"><path d="M0 14C4 14 4 6 8 6C12 6 12 14 16 14C20 14 20 6 24 6C28 6 28 14 32 14" stroke="#00AAAB" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <span>Unda Mora</span>
+  </a>
+  <div class="navl">
+    <a href="#svcs">Experiences</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#enq" class="nav-cta">Enquire</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-l">
+    <p class="hero-eyebrow">Boutique charter agency · Split, Croatia</p>
+    <h1 class="hero-title">Sailing<br>the way it<br>should be.</h1>
+    <p class="hero-sub">We are a small, careful agency. We don't offer everything to everyone — we find the right boat, the right crew, and the right week for you.</p>
+    <div class="hero-btns">
+      <a href="#enq" class="btn-p">Plan Your Voyage</a>
+      <a href="#svcs" class="btn-t">Explore →</a>
+    </div>
+  </div>
+  <div class="hero-r">
+    <img src="img-01.jpg" alt="Catamaran anchored Croatia">
+    <div class="hero-r-badge">
+      <div class="n">Adriatic Sea</div>
+      <div class="l">Split · Croatia · 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ti">PRIVATE CHARTER</span><span class="ti dot">·</span>
+    <span class="ti">VEGAN SAILING</span><span class="ti dot">·</span>
+    <span class="ti">BIKE & SAIL</span><span class="ti dot">·</span>
+    <span class="ti">HVAR · VIS · KORČULA</span><span class="ti dot">·</span>
+    <span class="ti">TEAM CHARTER</span><span class="ti dot">·</span>
+    <span class="ti">BOUTIQUE AGENCY</span><span class="ti dot">·</span>
+    <span class="ti">PRIVATE CHARTER</span><span class="ti dot">·</span>
+    <span class="ti">VEGAN SAILING</span><span class="ti dot">·</span>
+    <span class="ti">BIKE & SAIL</span><span class="ti dot">·</span>
+    <span class="ti">HVAR · VIS · KORČULA</span><span class="ti dot">·</span>
+    <span class="ti">TEAM CHARTER</span><span class="ti dot">·</span>
+    <span class="ti">BOUTIQUE AGENCY</span><span class="ti dot">·</span>
+  </div>
+</div>
+
+<section>
+  <div class="stmt fi">
+    <div class="stmt-l">
+      <p class="label">Our philosophy</p>
+      <h2>We don't own<br>a fleet. We know<br>every vessel<br>worth sailing.</h2>
+    </div>
+    <div class="stmt-r">
+      <div class="divider"></div>
+      <p>We are a boutique sailing agency based in Split, Croatia. Our team has worked in the Adriatic charter industry for over fifteen years — as captains, as crew, as guests.</p>
+      <p>We know what a great week at sea looks like. We know how rarely it happens by accident. Every charter we arrange starts with a conversation — not a catalogue.</p>
+    </div>
+  </div>
+</section>
+
+<section class="svcs" id="svcs">
+  <div class="svcs-header fi">
+    <h2>Five ways to be on the water.</h2>
+    <a href="#enq">View all →</a>
+  </div>
+  <div class="svcs-scroll">
+    <div class="sv fi"><div class="sv-num">01</div><div class="sv-t">Private Crewed Charter</div><div class="sv-d">Your boat, your itinerary, your pace. We source the right vessel for your group and ensure the crew matches your expectations.</div><a href="#enq" class="sv-l">Enquire</a></div>
+    <div class="sv fi"><div class="sv-num">02</div><div class="sv-t">Vegan Sailing Week</div><div class="sv-d">Plant-based fine dining at sea. Matea at the helm, Marina in the galley. A week of sailing unlike anything else on the Adriatic coast.</div><a href="#enq" class="sv-l">Enquire</a></div>
+    <div class="sv fi"><div class="sv-num">03</div><div class="sv-t">Bike & Sail Croatia</div><div class="sv-d">Island mornings on two wheels. Afternoons on the water. One of the most complete active weeks in the entire Adriatic.</div><a href="#enq" class="sv-l">Enquire</a></div>
+    <div class="sv fi"><div class="sv-num">04</div><div class="sv-t">Team & Corporate</div><div class="sv-d">The sea connects people. We design team building weeks and executive retreats your group will talk about for years.</div><a href="#enq" class="sv-l">Enquire</a></div>
+    <div class="sv fi"><div class="sv-num">05</div><div class="sv-t">Yoga at Sea</div><div class="sv-d">Morning practice on deck at anchor. Salt air, silence, and the kind of reset that doesn't require a spa.</div><a href="#enq" class="sv-l">Enquire</a></div>
+  </div>
+</section>
+
+<div class="pgrid" id="gallery">
+  <div class="pg"><img src="img-09.jpg" alt="Two catamarans anchored"></div>
+  <div class="pg"><img src="img-02.jpg" alt="Turquoise Croatian waters"></div>
+  <div class="pg"><img src="img-06.jpg" alt="Adriatic sunset"></div>
+  <div class="pg"><img src="img-08.jpg" alt="Kornati islands"></div>
+  <div class="pg"><img src="img-10.jpg" alt="Hvar archipelago aerial"></div>
+</div>
+
+<section class="phil" id="about">
+  <div class="phil-l fi">"The wave of the sea" — small enough to know every anchorage. Experienced enough to know what matters.</div>
+  <div class="fi">
+    <div class="phil-teal-line"></div>
+    <p>Unda Mora is a boutique sailing agency based in Split, Croatia. We have been working in the Adriatic charter industry for over fifteen years — as captains, as crew, as guests.</p>
+    <p>We offer five distinct charter experiences, each designed around a different way of living — and each tailored to your exact group, pace, and purpose.</p>
+  </div>
+</section>
+
+<section class="enq" id="enq">
+  <div class="enq-inner fi">
+    <p class="enq-label">2026 Season</p>
+    <h2>Let's plan<br>your week.</h2>
+    <p>Tell us about your group, your dates, and what kind of experience you're looking for. We'll come back with a proposal — not a brochure.</p>
+    <div class="enq-btns">
+      <a href="https://wa.me/385912264393?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20charter%20with%20Unda%20Mora." class="btn-wa" target="_blank">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:hello@undamora.com" class="btn-o">Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Unda Mora · Boutique Charter Agency · Split, Croatia</p>
+  <div class="fsoc">
+    <a href="https://instagram.com/the_agenda_55" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@the_agenda_55" target="_blank">TikTok</a>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
