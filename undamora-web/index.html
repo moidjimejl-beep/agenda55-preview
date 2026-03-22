@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unda Mora — Boutique Yacht Charter Agency · Croatia</title>
+<meta name="description" content="Unda Mora is a boutique luxury yacht charter agency based in Split, Croatia. Crewed charters, vegan sailing, bike & sail, tailor-made Adriatic voyages.">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"Unda Mora","description":"Boutique luxury yacht charter agency, Split, Croatia","url":"https://undamora.com","sameAs":["https://instagram.com/the_agenda_55"]}
+</script>
+
+<style>
+/* ═══════════════════════════════════════
+   UNDA MORA — Apple × Morii design language
+   Pure white. Oversized serif italic. Restraint.
+   Brand: #1A3A5C (deep navy), #00AAAB (teal wave)
+═══════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #1A3A5C;
+  --teal: #00AAAB;
+  --white: #FFFFFF;
+  --off: #F7F7F5;
+  --grey: #9A9A98;
+  --dark: #111111;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--white); color: var(--dark); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* ─── LOGO SVG ─── */
+.logo-mark {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.logo-wave { width: 32px; height: 20px; }
+.logo-text { font-family: var(--serif); font-size: 18px; font-style: italic; font-weight: 400; color: var(--navy); letter-spacing: 1px; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  padding: 28px 60px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: all 0.5s;
+}
+nav.scrolled {
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 18px 60px;
+  border-bottom: 1px solid rgba(26,58,92,0.08);
+}
+.nav-links { display: flex; gap: 44px; align-items: center; }
+.nav-links a {
+  font-family: var(--sans); font-size: 12px; font-weight: 400;
+  letter-spacing: 0.5px; color: var(--grey); text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--navy); }
+.nav-enquire {
+  padding: 10px 28px; border: 1px solid var(--navy);
+  font-family: var(--sans); font-size: 11px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--navy);
+  text-decoration: none; transition: all 0.3s;
+}
+.nav-enquire:hover { background: var(--navy); color: var(--white); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh; padding-top: 100px;
+  display: flex; flex-direction: column;
+  justify-content: center; padding: 100px 60px 80px;
+  position: relative; background: var(--white);
+}
+.hero-label {
+  font-family: var(--sans); font-size: 11px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 40px;
+}
+.hero-title {
+  font-family: var(--serif); font-size: clamp(72px, 11vw, 160px);
+  font-style: italic; font-weight: 300;
+  color: var(--navy); line-height: 0.9; letter-spacing: -2px;
+  max-width: 900px; margin-bottom: 48px;
+}
+.hero-title .wave-accent { color: var(--teal); }
+.hero-sub {
+  font-family: var(--sans); font-size: 16px; font-weight: 300;
+  color: var(--grey); max-width: 480px; line-height: 1.75;
+  margin-bottom: 60px;
+}
+.hero-actions { display: flex; gap: 24px; align-items: center; }
+.btn-primary {
+  padding: 16px 44px; background: var(--navy); color: var(--white);
+  font-family: var(--sans); font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; text-decoration: none;
+  transition: background 0.3s; display: inline-block;
+}
+.btn-primary:hover { background: #0f2a45; }
+.btn-text {
+  font-family: var(--sans); font-size: 13px; color: var(--navy);
+  text-decoration: none; border-bottom: 1px solid rgba(26,58,92,0.3);
+  padding-bottom: 3px; transition: border-color 0.3s;
+}
+.btn-text:hover { border-color: var(--navy); }
+
+/* ─── SCROLL IMAGES ─── */
+.hero-images {
+  padding: 80px 0 0; display: flex; gap: 16px; overflow-x: auto;
+  scroll-snap-type: x mandatory; -ms-overflow-style: none; scrollbar-width: none;
+}
+.hero-images::-webkit-scrollbar { display: none; }
+.hero-img {
+  flex: 0 0 auto; scroll-snap-align: start;
+  width: 420px; height: 280px; overflow: hidden; position: relative;
+}
+.hero-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.hero-img:hover img { transform: scale(1.04); }
+.hero-img-caption {
+  position: absolute; bottom: 16px; left: 16px;
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.7);
+}
+
+/* ─── STATEMENT ─── */
+.statement { padding: 140px 60px; max-width: 1100px; margin: 0 auto; }
+.statement-label {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 5px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 32px;
+}
+.statement-text {
+  font-family: var(--serif); font-size: clamp(32px, 4vw, 52px);
+  font-style: italic; font-weight: 300; color: var(--navy);
+  line-height: 1.3; letter-spacing: -0.5px;
+}
+.statement-text strong { font-style: normal; font-weight: 400; color: var(--dark); }
+
+/* ─── SERVICES ─── */
+.services { padding: 80px 60px 120px; background: var(--off); }
+.services-header { margin-bottom: 72px; }
+.services-header h2 {
+  font-family: var(--serif); font-size: clamp(36px, 5vw, 60px);
+  font-style: italic; font-weight: 300; color: var(--navy);
+  margin-bottom: 16px;
+}
+.services-header p {
+  font-family: var(--sans); font-size: 15px; color: var(--grey);
+  max-width: 500px; line-height: 1.7;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+}
+.service-card {
+  background: var(--white); padding: 48px 36px;
+  border-top: 2px solid transparent; transition: border-color 0.3s;
+  cursor: pointer;
+}
+.service-card:hover { border-color: var(--teal); }
+.service-num {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 24px;
+}
+.service-title {
+  font-family: var(--serif); font-size: 24px; font-style: italic;
+  font-weight: 300; color: var(--navy); margin-bottom: 16px; line-height: 1.2;
+}
+.service-text {
+  font-family: var(--sans); font-size: 13px; line-height: 1.75;
+  color: var(--grey); margin-bottom: 24px;
+}
+.service-link {
+  font-family: var(--sans); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--navy); text-decoration: none;
+  border-bottom: 1px solid rgba(26,58,92,0.2); padding-bottom: 3px;
+  transition: border-color 0.3s;
+}
+.service-link:hover { border-color: var(--navy); }
+
+/* ─── FULL BLEED IMAGE ─── */
+.full-bleed { position: relative; height: 70vh; overflow: hidden; }
+.full-bleed img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.full-bleed-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(26,58,92,0.7) 0%, rgba(26,58,92,0.2) 60%, transparent 100%);
+  display: flex; align-items: center; padding: 0 60px;
+}
+.full-bleed-content { max-width: 560px; }
+.full-bleed-content h2 {
+  font-family: var(--serif); font-size: clamp(40px, 6vw, 72px);
+  font-style: italic; font-weight: 300; color: var(--white);
+  line-height: 1.0; margin-bottom: 24px;
+}
+.full-bleed-content p {
+  font-family: var(--sans); font-size: 16px; color: rgba(255,255,255,0.75);
+  line-height: 1.7; margin-bottom: 36px;
+}
+.btn-white {
+  display: inline-block; padding: 14px 40px;
+  border: 1px solid rgba(255,255,255,0.6); color: var(--white);
+  font-family: var(--sans); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+}
+.btn-white:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
+/* ─── EDITORIAL GRID ─── */
+.editorial { padding: 120px 60px; }
+.editorial h2 {
+  font-family: var(--serif); font-size: clamp(36px, 4vw, 56px);
+  font-style: italic; font-weight: 300; color: var(--navy);
+  margin-bottom: 64px; letter-spacing: -0.5px;
+}
+.editorial-grid {
+  display: grid; grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  grid-template-rows: 300px 300px; gap: 4px;
+}
+.edit-item { overflow: hidden; position: relative; cursor: pointer; }
+.edit-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.edit-item:hover img { transform: scale(1.05); }
+.edit-item:first-child { grid-row: 1/3; }
+.edit-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(26,58,92,0.7) 0%, transparent 100%);
+  padding: 24px 20px 16px;
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.8);
+  opacity: 0; transition: opacity 0.3s;
+}
+.edit-item:hover .edit-caption { opacity: 1; }
+
+/* ─── PHILOSOPHY ─── */
+.philosophy { padding: 120px 60px; background: var(--navy); }
+.philosophy-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.philosophy-label {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 5px;
+  text-transform: uppercase; color: rgba(0,170,171,0.8); margin-bottom: 40px;
+}
+.philosophy-quote {
+  font-family: var(--serif); font-size: clamp(28px, 4vw, 48px);
+  font-style: italic; font-weight: 300; color: var(--white);
+  line-height: 1.4; margin-bottom: 48px;
+}
+.philosophy-divider { width: 48px; height: 1px; background: var(--teal); margin: 0 auto 40px; opacity: 0.6; }
+.philosophy-sub {
+  font-family: var(--sans); font-size: 14px; color: rgba(255,255,255,0.5);
+  line-height: 1.8; letter-spacing: 0.5px;
+}
+
+/* ─── ENQUIRE ─── */
+.enquire { padding: 140px 60px; text-align: center; background: var(--white); }
+.enquire-inner { max-width: 680px; margin: 0 auto; }
+.enquire-label {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 5px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 32px;
+}
+.enquire h2 {
+  font-family: var(--serif); font-size: clamp(48px, 7vw, 88px);
+  font-style: italic; font-weight: 300; color: var(--navy);
+  line-height: 0.95; margin-bottom: 28px; letter-spacing: -2px;
+}
+.enquire p {
+  font-family: var(--sans); font-size: 16px; color: var(--grey);
+  line-height: 1.75; margin-bottom: 52px;
+}
+.enquire-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-wa {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 40px; background: #25D366; color: white;
+  font-family: var(--sans); font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; text-decoration: none; transition: background 0.3s;
+}
+.btn-wa:hover { background: #1da851; }
+.btn-outline {
+  display: inline-block; padding: 16px 40px;
+  border: 1px solid var(--navy); color: var(--navy);
+  font-family: var(--sans); font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; text-decoration: none; transition: all 0.3s;
+}
+.btn-outline:hover { background: var(--navy); color: white; }
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 60px; background: var(--navy);
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 40px;
+}
+.footer-brand .logo-text { color: var(--white); }
+.footer-brand p {
+  font-family: var(--sans); font-size: 13px; color: rgba(255,255,255,0.4);
+  margin-top: 16px; line-height: 1.7; max-width: 300px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 12px; }
+.footer-links h4 {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
+}
+.footer-links a {
+  font-family: var(--sans); font-size: 13px; color: rgba(255,255,255,0.45);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: white; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 40px; padding-top: 24px; width: 100%;
+  display: flex; justify-content: space-between;
+}
+.footer-bottom p {
+  font-family: var(--sans); font-size: 11px;
+  letter-spacing: 1px; color: rgba(255,255,255,0.2);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .editorial-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .edit-item:first-child { grid-row: 1; grid-column: 1/3; height: 300px; }
+}
+@media (max-width: 768px) {
+  nav, nav.scrolled { padding: 20px 24px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 24px 60px; }
+  .statement { padding: 80px 24px; }
+  .services { padding: 60px 24px 80px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .editorial { padding: 80px 24px; }
+  .editorial-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .edit-item:first-child { grid-row: 1; grid-column: 1; height: 260px; }
+  .philosophy, .enquire { padding: 80px 24px; }
+  .full-bleed-overlay { padding: 0 24px; }
+  footer { padding: 40px 24px; flex-direction: column; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+  .enquire-btns { flex-direction: column; align-items: center; }
+}
+
+/* ─── ANIMATIONS ─── */
+.fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.9s, transform 0.9s; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo-mark">
+    <svg class="logo-wave" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 14C4 14 4 6 8 6C12 6 12 14 16 14C20 14 20 6 24 6C28 6 28 14 32 14" stroke="#00AAAB" stroke-width="2" stroke-linecap="round"/>
+      <path d="M0 18C4 18 4 10 8 10C12 10 12 18 16 18C20 18 20 10 24 10C28 10 28 18 32 18" stroke="#1A3A5C" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+    </svg>
+    <span class="logo-text">Unda Mora</span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Experiences</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#enquire" class="nav-enquire">Enquire</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-label fade-up">Boutique charter agency · Split, Croatia · Adriatic Sea</p>
+  <h1 class="hero-title fade-up">
+    Beyond<br>
+    the<br>
+    <span class="wave-accent">ordinary</span><br>
+    seas.
+  </h1>
+  <p class="hero-sub fade-up">We are a small, careful agency. We don't offer everything to everyone — we find the right boat, the right crew, and the right week for you.</p>
+  <div class="hero-actions fade-up">
+    <a href="#enquire" class="btn-primary">Plan Your Voyage</a>
+    <a href="#services" class="btn-text">Explore experiences →</a>
+  </div>
+</section>
+
+<!-- SCROLL IMAGES -->
+<div class="hero-images">
+  <div class="hero-img">
+    <img src="img-01.jpg" alt="Catamaran at secret Kornati cove" loading="lazy">
+    <span class="hero-img-caption">Kornati</span>
+  </div>
+  <div class="hero-img">
+    <img src="img-02.jpg" alt="Lagoon catamaran turquoise water" loading="lazy">
+    <span class="hero-img-caption">Šibenik Archipelago</span>
+  </div>
+  <div class="hero-img">
+    <img src="img-05.jpg" alt="Catamaran at anchor Croatia" loading="lazy">
+    <span class="hero-img-caption">Dalmatia</span>
+  </div>
+  <div class="hero-img">
+    <img src="img-06.jpg" alt="Sunset over Croatian marina" loading="lazy">
+    <span class="hero-img-caption">Adriatic Sunset</span>
+  </div>
+  <div class="hero-img">
+    <img src="img-10.jpg" alt="Hvar archipelago aerial" loading="lazy">
+    <span class="hero-img-caption">Hvar Archipelago</span>
+  </div>
+</div>
+
+<!-- STATEMENT -->
+<section class="statement fade-up">
+  <p class="statement-label">Our philosophy</p>
+  <p class="statement-text">
+    We believe the Adriatic is best experienced <strong>slowly, personally,</strong> and without the noise of mass tourism. Every charter we arrange is a reflection of <em>who you are</em> — not a product we picked from a catalogue.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header fade-up">
+    <h2>Five ways to be on the water.</h2>
+    <p>Each experience is designed around a different way of living — and can be tailored to your exact group, pace, and purpose.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-num">01</div>
+      <div class="service-title">Private Crewed Charter</div>
+      <div class="service-text">Your boat, your itinerary, your pace. We source the right vessel for your group and ensure the crew matches your expectations — not a standard package.</div>
+      <a href="#enquire" class="service-link">Enquire</a>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">02</div>
+      <div class="service-title">Vegan Sailing Week</div>
+      <div class="service-text">Plant-based fine dining on the Adriatic. Matea at the helm, Marina in the galley — a week of sailing and food unlike anything else on the coast.</div>
+      <a href="#enquire" class="service-link">Enquire</a>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">03</div>
+      <div class="service-title">Bike & Sail Croatia</div>
+      <div class="service-text">Island mornings on two wheels. Afternoons on the water. One of the most complete active weeks in the entire Adriatic — and one of the most beautiful.</div>
+      <a href="#enquire" class="service-link">Enquire</a>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-num">04</div>
+      <div class="service-title">Team & Corporate</div>
+      <div class="service-text">The sea has a way of connecting people. We design team building weeks and executive retreats that your group will be talking about for years.</div>
+      <a href="#enquire" class="service-link">Enquire</a>
+    </div>
+  </div>
+</section>
+
+<!-- FULL BLEED -->
+<div class="full-bleed">
+  <img src="img-09.jpg" alt="Two catamarans anchored secluded bay Croatia">
+  <div class="full-bleed-overlay">
+    <div class="full-bleed-content fade-up">
+      <h2>We choose every boat wisely.</h2>
+      <p>We don't own a fleet. We know every vessel on the Adriatic worth sailing — and we match you with the one that fits you perfectly.</p>
+      <a href="#enquire" class="btn-white">Start a conversation</a>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="editorial" id="gallery">
+  <h2 class="fade-up">The Adriatic through our lens.</h2>
+  <div class="editorial-grid">
+    <div class="edit-item">
+      <img src="img-03.jpg" alt="Sailing yacht aerial Croatia">
+      <span class="edit-caption">Hvar · South Dalmatia</span>
+    </div>
+    <div class="edit-item">
+      <img src="img-04.jpg" alt="Pakleni Islands bay">
+      <span class="edit-caption">Pakleni Islands</span>
+    </div>
+    <div class="edit-item">
+      <img src="img-07.jpg" alt="Catamaran fleet marina Šibenik">
+      <span class="edit-caption">Šibenik Region</span>
+    </div>
+    <div class="edit-item">
+      <img src="img-08.jpg" alt="Kornati catamarans moored">
+      <span class="edit-caption">Kornati</span>
+    </div>
+    <div class="edit-item">
+      <img src="img-10.jpg" alt="Hvar archipelago">
+      <span class="edit-caption">Hvar Archipelago</span>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy" id="about">
+  <div class="philosophy-inner fade-up">
+    <p class="philosophy-label">Unda Mora</p>
+    <p class="philosophy-quote">"The wave of the sea" — small enough to know every anchorage. Experienced enough to know what matters.</p>
+    <div class="philosophy-divider"></div>
+    <p class="philosophy-sub">We are a boutique sailing agency based in Split, Croatia. Our team has worked in the Adriatic charter industry for over fifteen years — as captains, as crew, as guests. We know what a great week at sea looks like. We know how rarely it happens by accident.</p>
+  </div>
+</section>
+
+<!-- ENQUIRE -->
+<section class="enquire" id="enquire">
+  <div class="enquire-inner">
+    <p class="enquire-label fade-up">2026 Season</p>
+    <h2 class="fade-up">Let's plan<br>your week.</h2>
+    <p class="fade-up">Tell us about your group, your dates, and what kind of experience you're looking for. We'll come back to you with a proposal — not a brochure.</p>
+    <div class="enquire-btns fade-up">
+      <a href="https://wa.me/385912264393?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20charter%20with%20Unda%20Mora." class="btn-wa" target="_blank">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:hello@undamora.com" class="btn-outline">Email us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="logo-mark">
+      <svg class="logo-wave" viewBox="0 0 32 20" fill="none">
+        <path d="M0 14C4 14 4 6 8 6C12 6 12 14 16 14C20 14 20 6 24 6C28 6 28 14 32 14" stroke="#00AAAB" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text" style="color:white">Unda Mora</span>
+    </a>
+    <p>Boutique yacht charter agency. Split, Croatia. Adriatic Sea.<br>Available May through October.</p>
+  </div>
+  <div class="footer-links">
+    <h4>Experiences</h4>
+    <a href="#">Private Charter</a>
+    <a href="#">Vegan Sailing Week</a>
+    <a href="#">Bike & Sail</a>
+    <a href="#">Team & Corporate</a>
+  </div>
+  <div class="footer-links">
+    <h4>Follow</h4>
+    <a href="https://instagram.com/the_agenda_55" target="_blank">Instagram @the_agenda_55</a>
+    <a href="https://tiktok.com/@the_agenda_55" target="_blank">TikTok @the_agenda_55</a>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Unda Mora · Boutique Charter Agency · Split, Croatia</p>
+    <p>undamora.com</p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// Fade up
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
