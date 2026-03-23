@@ -534,7 +534,7 @@ footer {
       <div class="exp-card fade-in" style="padding:52px 44px; background:#1e1d1e;">
         <div style="font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--teal); margin-bottom:20px;">02 — Water Toys</div>
         <div class="exp-title" style="font-size:22px; font-weight:300; text-transform:none; letter-spacing:0; margin-bottom:16px; color:var(--cream);">The most equipped fleet in its class.</div>
-        <div class="exp-text">Williams SportJet 395 (100HP jet tender) · 2× Seabob F5SR · Air e-foil · 2× paddleboards · Wakeboard · Water skis · Donut · Banana · Advanced fishing gear · Snorkeling ×8. Most boats have a tender and two paddleboards. This is a different category.</div>
+        <div class="exp-text">Williams SportJet 395 (100HP) · 2× Seabob F5SR · Air e-foil · 2× paddleboards · Wakeboard · Water skis · Donut · Banana · Fishing gear · Snorkeling ×8 · 2× Electric scooters · Cinema projector · Custom water bottles · Prana mats · Yoga mats · Board games. This is a different category.</div>
       </div>
     </div>
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px; margin-bottom:2px;">
@@ -576,6 +576,35 @@ footer {
     <p style="font-size:10px;letter-spacing:6px;text-transform:uppercase;color:#00AAAB;display:flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="display:inline-block;width:28px;height:1px;background:#00AAAB"></span>On Board Dining</p>
     <h2 style="font-size:clamp(32px,5vw,52px);font-weight:300;color:#FCFAED;margin-bottom:16px;">A kitchen as good<br>as the view.</h2>
     <p style="font-size:16px;color:#A7A9AC;max-width:560px;line-height:1.75;margin-bottom:64px;">Hana prepares two fresh meals daily — breakfast and lunch or dinner. Here's a sample of what comes out of the galley.</p>
+    <!-- Photo grid + expand button -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px;">
+      <div></div>
+      <button onclick="var m=document.getElementById('menu-full');m.style.display=m.style.display==='none'?'block':'none';this.textContent=m.style.display==='none'?'View full menu ↓':'Hide menu ↑'" 
+              style="background:none;border:1px solid rgba(252,250,237,0.2);color:#FCFAED;padding:12px 28px;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .3s">View full menu ↓</button>
+    </div>
+    
+    <!-- Food photo grid -->
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:4px;margin-bottom:2px;">
+      <div style="grid-row:1/3;background:linear-gradient(160deg,#1a2535,#0a1525);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+        <div style="font-size:56px">🦑</div>
+        <div style="font-size:13px;color:#FCFAED;letter-spacing:2px;text-align:center">Black Cuttlefish<br>Risotto</div>
+      </div>
+      <div style="background:linear-gradient(160deg,#1a1a2a,#0d0d1e);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <div style="font-size:40px">🐟</div><div style="font-size:11px;color:#FCFAED;letter-spacing:1px">Brudet</div>
+      </div>
+      <div style="background:linear-gradient(160deg,#251a1a,#180d0d);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <div style="font-size:40px">🍝</div><div style="font-size:11px;color:#FCFAED;letter-spacing:1px">Truffle Pasta</div>
+      </div>
+      <div style="background:linear-gradient(160deg,#1a2520,#0d1a10);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <div style="font-size:40px">🥗</div><div style="font-size:11px;color:#FCFAED;letter-spacing:1px">Burrata Salad</div>
+      </div>
+      <div style="background:linear-gradient(160deg,#251e10,#18140a);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <div style="font-size:40px">🍰</div><div style="font-size:11px;color:#FCFAED;letter-spacing:1px">Pistachio Cheesecake</div>
+      </div>
+    </div>
+
+    <!-- Hidden text menu -->
+    <div id="menu-full" style="display:none;">
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;">
       <div style="background:#2a2829;padding:36px 28px;border-top:2px solid rgba(0,170,171,0.4);">
         <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#00AAAB;margin-bottom:20px;">Adriatic Sea</div>
@@ -610,7 +639,8 @@ footer {
         </div>
       </div>
     </div>
-    <p style="margin-top:24px;font-size:11px;letter-spacing:2px;color:rgba(252,250,237,0.25);text-align:center;">Sample menu — dishes may vary based on market availability and guest preferences</p>
+    <p style="margin-top:24px;font-size:11px;letter-spacing:2px;color:rgba(252,250,237,0.25);text-align:center;">Sample menu — dishes vary based on market availability and guest preferences</p>
+  </div>
   </div>
 </section>
 
@@ -696,6 +726,12 @@ footer {
         <div class="toy-item">Water Skis<br><span style="color:var(--grey); font-size:11px;">For all levels</span></div>
         <div class="toy-item">Banana & Donut<br><span style="color:var(--grey); font-size:11px;">Towable rides</span></div>
         <div class="toy-item">Snorkeling × 8<br><span style="color:var(--grey); font-size:11px;">Full sets for all guests</span></div>
+        <div class="toy-item">2× Electric Scooters<br><span style="color:var(--grey); font-size:11px;">Explore islands on land</span></div>
+        <div class="toy-item">Board Games<br><span style="color:var(--grey); font-size:11px;">Monopoly, UNO & more</span></div>
+        <div class="toy-item">Prana Mat × 2<br><span style="color:var(--grey); font-size:11px;">Active recovery sessions</span></div>
+        <div class="toy-item">Yoga Mats × 2<br><span style="color:var(--grey); font-size:11px;">Morning deck practice</span></div>
+        <div class="toy-item">Cinema Projector<br><span style="color:var(--grey); font-size:11px;">Open-air screenings on deck</span></div>
+        <div class="toy-item">Custom Water Bottles<br><span style="color:var(--grey); font-size:11px;">Personal Agenda 55 edition</span></div>
       </div>
     </div>
   </div>
