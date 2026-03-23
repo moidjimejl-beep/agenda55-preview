@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unda Mora — Brand Guidelines</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1A3A5C;--teal:#00AAAB;--white:#FFFFFF;--cream:#F7F7F5;--grey:#8A8A88;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
+body{font-family:var(--sans);background:var(--white);color:#111;-webkit-font-smoothing:antialiased}
+.page{max-width:1000px;margin:0 auto;padding:80px 60px}
+h1{font-family:var(--serif);font-size:60px;font-style:italic;font-weight:300;color:var(--navy);margin-bottom:12px}
+.subtitle{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:80px}
+.section{margin-bottom:80px}
+.section-label{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--teal);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid rgba(0,170,171,0.2)}
+.section h2{font-family:var(--serif);font-size:32px;font-style:italic;font-weight:300;color:var(--navy);margin-bottom:8px}
+.section p{font-size:14px;color:var(--grey);line-height:1.8;margin-bottom:20px}
+
+/* LOGO GRID */
+.logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:16px}
+.logo-box{background:var(--cream);padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:160px}
+.logo-box.dark{background:var(--navy)}
+.logo-box.teal{background:var(--teal)}
+.logo-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--grey)}
+.logo-box.dark .logo-label{color:rgba(255,255,255,0.4)}
+.logo-box.teal .logo-label{color:rgba(255,255,255,0.6)}
+
+/* COLORS */
+.color-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}
+.swatch{border-radius:0}
+.swatch-color{height:80px}
+.swatch-info{padding:12px 0}
+.swatch-name{font-size:11px;font-weight:600;color:#111;margin-bottom:4px}
+.swatch-hex{font-size:11px;color:var(--grey);font-family:monospace}
+
+/* TYPOGRAPHY */
+.type-row{margin-bottom:32px}
+.type-specimen{margin:12px 0 8px}
+.type-meta{font-size:11px;color:var(--grey)}
+
+/* USAGE */
+.usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:16px}
+.usage-box{padding:32px;min-height:120px;display:flex;align-items:center}
+.usage-box.bg-white{background:white;border:1px solid #eee}
+.usage-box.bg-cream{background:var(--cream)}
+.usage-box.bg-navy{background:var(--navy)}
+.usage-box.bg-teal{background:var(--teal)}
+.usage-text{font-size:11px;letter-spacing:3px;text-transform:uppercase}
+
+/* DO DONT */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:16px}
+.rule-box{padding:24px;background:var(--cream)}
+.rule-box.dont{background:#FFF5F5}
+.rule-title{font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+.rule-title.do{color:var(--teal)}
+.rule-title.dont{color:#E05252}
+.rule-item{font-size:13px;color:var(--grey);margin-bottom:8px;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.rule-item::before{content:'✓';color:var(--teal);font-weight:600;flex-shrink:0}
+.rule-box.dont .rule-item::before{content:'✗';color:#E05252}
+
+hr{border:none;border-top:1px solid rgba(26,58,92,0.08);margin:80px 0}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <p class="subtitle">Brand Guidelines · 2026</p>
+  <h1>Unda Mora</h1>
+  <p style="font-size:16px;color:var(--grey);line-height:1.8;max-width:520px;margin-bottom:80px">These guidelines define how the Unda Mora brand is expressed — across web, print, and every touchpoint. Follow them to maintain consistency and protect the brand's premium positioning.</p>
+
+  <hr>
+
+  <!-- LOGO -->
+  <div class="section">
+    <p class="section-label">01 · Logo</p>
+    <h2>The Wave Mark</h2>
+    <p>The Unda Mora logo combines bold geometric sans-serif typography with an integrated wave symbol. The wave represents the breaking sea — the core of everything we do. The O in MORA contains or is replaced by the wave, creating a unique, ownable mark.</p>
+    
+    <div class="logo-grid">
+      <!-- Primary -->
+      <div class="logo-box" style="grid-column:1/3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100" width="280">
+          <text x="110" y="38" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" letter-spacing="8" text-anchor="middle" fill="#1A3A5C">UNDA</text>
+          <text x="22" y="82" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" fill="#1A3A5C">M</text>
+          <g transform="translate(62,52)">
+            <circle cx="18" cy="17" r="16" fill="none" stroke="#1A3A5C" stroke-width="3"/>
+            <path d="M 8,15 C 10,9 15,7 18,8 C 20,9 21,7 20,5 C 19,3 16,3 15,5 C 14,7 15,11 18,12 C 21,13 26,14 26,18 C 26,22 22,23 18,22 C 14,21 8,20 8,15 Z" fill="none" stroke="#1A3A5C" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M 5,21 C 8,20 12,20.5 16,20 C 20,19.5 24,20 29,21" fill="none" stroke="#00AAAB" stroke-width="1.3" stroke-linecap="round"/>
+          </g>
+          <text x="103" y="82" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" fill="#1A3A5C">RA</text>
+        </svg>
+        <span class="logo-label">Primary Logo — Light Background</span>
+      </div>
+      
+      <!-- White version -->
+      <div class="logo-box dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100" width="180">
+          <text x="110" y="38" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" letter-spacing="8" text-anchor="middle" fill="white">UNDA</text>
+          <text x="22" y="82" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" fill="white">M</text>
+          <g transform="translate(62,52)">
+            <circle cx="18" cy="17" r="16" fill="none" stroke="white" stroke-width="3"/>
+            <path d="M 8,15 C 10,9 15,7 18,8 C 20,9 21,7 20,5 C 19,3 16,3 15,5 C 14,7 15,11 18,12 C 21,13 26,14 26,18 C 26,22 22,23 18,22 C 14,21 8,20 8,15 Z" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M 5,21 C 8,20 12,20.5 16,20 C 20,19.5 24,20 29,21" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.3" stroke-linecap="round"/>
+          </g>
+          <text x="103" y="82" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="32" fill="white">RA</text>
+        </svg>
+        <span class="logo-label">Reversed — Dark Background</span>
+      </div>
+    </div>
+
+    <!-- Sub-marks -->
+    <div style="margin-top:2px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
+      <!-- UM -->
+      <div class="logo-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80">
+          <text x="8" y="55" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="48" fill="#1A3A5C">U</text>
+          <text x="38" y="55" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="48" fill="#1A3A5C">M</text>
+          <path d="M 8,62 C 16,58 24,60 32,58 C 40,56 50,58 62,62 C 66,63 70,62 72,60" fill="none" stroke="#00AAAB" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-label">UM Monogram</span>
+      </div>
+      
+      <!-- UN / MO stacked -->
+      <div class="logo-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="80">
+          <text x="50" y="44" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="38" letter-spacing="3" text-anchor="middle" fill="#1A3A5C">UN</text>
+          <line x1="18" y1="52" x2="82" y2="52" stroke="#00AAAB" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="14" y="90" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="38" fill="#1A3A5C">M</text>
+          <g transform="translate(55,62)">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="#1A3A5C" stroke-width="3"/>
+            <path d="M 7,14 C 9,8 14,6 17,7.5 C 19,8.5 20,6.5 19,4.5 C 18,2.5 15,2.5 14,4.5 C 13,6.5 14,10 17,11 C 20,12 24,13 24,17 C 24,21 20,22 17,21 C 14,20 7,19 7,14 Z" fill="none" stroke="#1A3A5C" stroke-width="1.8" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <span class="logo-label">UN/MO Stacked</span>
+      </div>
+      
+      <!-- Wave icon only -->
+      <div class="logo-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60">
+          <g transform="translate(8,8)">
+            <path d="M 4,28 C 8,14 20,8 26,11 C 30,12.5 31,8 29,5 C 27,2 22,2 21,5 C 20,8 21,15 26,17 C 31,19 38,23 38,30 C 38,37 32,39 26,37 C 20,35 4,32 4,28 Z" fill="none" stroke="#1A3A5C" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M 2,35 C 8,33 16,34 22,33 C 28,32 34,33 42,35" fill="none" stroke="#00AAAB" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+            <path d="M 0,41 C 6,39 14,40 20,39 C 26,38 32,39 44,41" fill="none" stroke="#1A3A5C" stroke-width="1.4" stroke-linecap="round" opacity="0.35"/>
+          </g>
+        </svg>
+        <span class="logo-label">Wave Icon</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- COLORS -->
+  <div class="section">
+    <p class="section-label">02 · Colors</p>
+    <h2>Brand Palette</h2>
+    <p>Two primary colors. Used consistently across all materials. Never use approximations.</p>
+    <div class="color-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1A3A5C"></div>
+        <div class="swatch-info"><div class="swatch-name">Navy</div><div class="swatch-hex">#1A3A5C<br>RGB 26 58 92<br>CMYK 72 37 0 64</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#00AAAB"></div>
+        <div class="swatch-info"><div class="swatch-name">Teal</div><div class="swatch-hex">#00AAAB<br>RGB 0 170 171<br>CMYK 100 0 0 33</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F7F7F5; border:1px solid #eee"></div>
+        <div class="swatch-info"><div class="swatch-name">Off-White</div><div class="swatch-hex">#F7F7F5<br>RGB 247 247 245</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#111111"></div>
+        <div class="swatch-info"><div class="swatch-name">Black</div><div class="swatch-hex">#111111<br>Body text only</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8A8A88"></div>
+        <div class="swatch-info"><div class="swatch-name">Grey</div><div class="swatch-hex">#8A8A88<br>Secondary text</div></div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- TYPOGRAPHY -->
+  <div class="section">
+    <p class="section-label">03 · Typography</p>
+    <h2>Type System</h2>
+    
+    <div class="type-row">
+      <p class="type-meta">Display / Headline — Cormorant Garamond Italic 300</p>
+      <div class="type-specimen" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-style:italic;font-weight:300;color:#1A3A5C;line-height:1">Beyond the ordinary seas.</div>
+    </div>
+    
+    <div class="type-row">
+      <p class="type-meta">Body — Inter 300 · 15–17px · Line height 1.75</p>
+      <div class="type-specimen" style="font-family:'Inter',sans-serif;font-size:16px;font-weight:300;color:#8A8A88;line-height:1.75;max-width:480px">We are a small, careful agency. We don't offer everything to everyone — we find the right boat, the right crew, and the right week for you.</div>
+    </div>
+    
+    <div class="type-row">
+      <p class="type-meta">Label / Caption — Inter 400 · 10–11px · Letter-spacing 4–6px · Uppercase</p>
+      <div class="type-specimen" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:400;color:#00AAAB;letter-spacing:5px;text-transform:uppercase">Boutique charter agency · Split, Croatia</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- LOGO USAGE -->
+  <div class="section">
+    <p class="section-label">04 · Logo Usage</p>
+    <h2>Do & Don't</h2>
+    <div class="rules">
+      <div class="rule-box">
+        <p class="rule-title do">Do</p>
+        <div class="rule-item">Use primary logo on white or off-white backgrounds</div>
+        <div class="rule-item">Use reversed (white) logo on navy or dark photography</div>
+        <div class="rule-item">Maintain minimum clear space equal to the height of 'U'</div>
+        <div class="rule-item">Use wave icon alone as favicon or social avatar</div>
+        <div class="rule-item">Use UM monogram for compact applications (embroidery, small print)</div>
+      </div>
+      <div class="rule-box dont">
+        <p class="rule-title dont">Don't</p>
+        <div class="rule-item" style="display:flex;gap:8px"><span style="color:#E05252;font-weight:600;flex-shrink:0">✗</span>Stretch or distort the logo</div>
+        <div class="rule-item" style="display:flex;gap:8px"><span style="color:#E05252;font-weight:600;flex-shrink:0">✗</span>Change the navy to any other color except white (reversed)</div>
+        <div class="rule-item" style="display:flex;gap:8px"><span style="color:#E05252;font-weight:600;flex-shrink:0">✗</span>Place logo on busy photography without sufficient contrast</div>
+        <div class="rule-item" style="display:flex;gap:8px"><span style="color:#E05252;font-weight:600;flex-shrink:0">✗</span>Add "d.o.o." or legal suffixes to the brand logo</div>
+        <div class="rule-item" style="display:flex;gap:8px"><span style="color:#E05252;font-weight:600;flex-shrink:0">✗</span>Use the teal color for the primary logo mark</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- VOICE -->
+  <div class="section">
+    <p class="section-label">05 · Tone of Voice</p>
+    <h2>How We Speak</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:16px">
+      <div>
+        <p style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px">We are</p>
+        <p style="font-size:15px;font-weight:300;color:#111;line-height:1.8;margin-bottom:8px">Quiet. Confident. Precise.</p>
+        <p style="font-size:14px;color:var(--grey);line-height:1.8">We don't shout. We don't over-promise. We speak like someone who has been on the sea for twenty years and knows exactly what they're talking about.</p>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px">We are not</p>
+        <p style="font-size:15px;font-weight:300;color:#111;line-height:1.8;margin-bottom:8px">Generic. Loud. Transactional.</p>
+        <p style="font-size:14px;color:var(--grey);line-height:1.8">No "Amazing deals!" No "Book now before it's too late!" We don't sound like a discount travel agency. We sound like a trusted expert.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:60px 0;text-align:center;border-top:1px solid rgba(26,58,92,0.08);margin-top:40px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="40" height="40" style="margin-bottom:16px">
+      <g transform="translate(8,8)">
+        <path d="M 4,28 C 8,14 20,8 26,11 C 30,12.5 31,8 29,5 C 27,2 22,2 21,5 C 20,8 21,15 26,17 C 31,19 38,23 38,30 C 38,37 32,39 26,37 C 20,35 4,32 4,28 Z" fill="none" stroke="#1A3A5C" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 2,35 C 8,33 16,34 22,33 C 28,32 34,33 42,35" fill="none" stroke="#00AAAB" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--grey)">Unda Mora Brand Guidelines · 2026 · Internal Use</p>
+  </div>
+
+</div>
+</body>
+</html>
