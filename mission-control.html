@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="60">
+<title>Mission Control — Shuba × Xody</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A0A0A; --surface:#111111; --border:rgba(255,255,255,0.06);
+  --navy:#1A3A5C; --teal:#00AAAB; --gold:#F3DAAB; --green:#22C55E;
+  --red:#EF4444; --orange:#F97316; --grey:#6B7280; --white:#F9FAFB;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);min-height:100vh;-webkit-font-smoothing:antialiased}
+.top-bar{background:var(--navy);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+.top-bar h1{font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase}
+.top-bar .meta{font-size:12px;color:rgba(255,255,255,0.5);display:flex;gap:24px;align-items:center}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.grid{display:grid;grid-template-columns:280px 1fr 320px;gap:1px;background:var(--border);height:calc(100vh - 53px)}
+.col{background:var(--bg);overflow-y:auto}
+
+/* LEFT — Projects */
+.section-head{padding:16px 20px;border-bottom:1px solid var(--border);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--teal);display:flex;justify-content:space-between;align-items:center}
+.project-item{padding:14px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s}
+.project-item:hover{background:rgba(255,255,255,.03)}
+.project-item.active{background:rgba(0,170,171,0.08);border-left:2px solid var(--teal)}
+.proj-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.proj-name{font-size:13px;font-weight:500}
+.proj-rev{font-size:11px;color:var(--teal)}
+.proj-meta{font-size:11px;color:var(--grey)}
+.badge{display:inline-block;padding:2px 8px;border-radius:2px;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.badge.live{background:rgba(34,197,94,0.15);color:var(--green)}
+.badge.building{background:rgba(249,115,22,0.15);color:var(--orange)}
+.badge.planned{background:rgba(107,114,128,0.15);color:var(--grey)}
+.badge.urgent{background:rgba(239,68,68,0.15);color:var(--red)}
+
+/* MIDDLE — Tasks */
+.task-group{padding:16px 20px;border-bottom:1px solid var(--border)}
+.task-group-title{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--grey);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.task{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.03);align-items:flex-start}
+.task:last-child{border-bottom:none}
+.task-check{width:16px;height:16px;border-radius:3px;border:1px solid var(--border);flex-shrink:0;margin-top:1px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.task-check.done{background:var(--teal);border-color:var(--teal)}
+.task-check.done::after{content:'✓';font-size:10px;color:white;font-weight:700}
+.task-body{flex:1}
+.task-title{font-size:13px;color:var(--white);line-height:1.4;margin-bottom:3px}
+.task-title.done-text{text-decoration:line-through;color:var(--grey)}
+.task-detail{font-size:11px;color:var(--grey);line-height:1.5}
+.task-tag{display:inline-block;padding:1px 6px;background:rgba(0,170,171,0.12);color:var(--teal);font-size:10px;border-radius:2px;margin-right:4px}
+.priority-high{border-left:2px solid var(--red);padding-left:8px}
+.priority-med{border-left:2px solid var(--orange);padding-left:8px}
+.priority-low{border-left:2px solid var(--grey);padding-left:8px}
+
+/* RIGHT — Finance + Questions */
+.metric-card{padding:16px 20px;border-bottom:1px solid var(--border)}
+.metric-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.metric-value{font-size:28px;font-weight:300;color:var(--white);line-height:1}
+.metric-sub{font-size:11px;color:var(--grey);margin-top:4px}
+.progress-bar{height:4px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:12px}
+.progress-fill{height:4px;border-radius:2px;background:linear-gradient(to right,var(--teal),#00d4d6)}
+
+.q-item{padding:12px 20px;border-bottom:1px solid var(--border)}
+.q-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.q-text{font-size:12px;color:var(--white);line-height:1.6}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1>⚡ Mission Control — Shuba × Xody</h1>
+  <div class="meta">
+    <div class="live-dot"></div>
+    <span>Live dashboard</span>
+    <span id="clock"></span>
+    <span>Target: €100k by Dec 2026</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <!-- LEFT: PROJECTS -->
+  <div class="col">
+    <div class="section-head">Projects <span style="color:var(--grey)">7 active</span></div>
+
+    <div class="project-item active">
+      <div class="proj-header"><span class="proj-name">Agenda 55 — Website</span><span class="badge urgent">URGENT</span></div>
+      <div class="proj-meta">Go live → direct bookings</div>
+      <div class="proj-rev">+60-90k€ / season</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">Vegan Sailing 2026</span><span class="badge building">Building</span></div>
+      <div class="proj-meta">6 termini · Matea + Marina</div>
+      <div class="proj-rev">+30k€ / season</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">Unda Mora — Agency</span><span class="badge building">Building</span></div>
+      <div class="proj-meta">Web live + booking flow</div>
+      <div class="proj-rev">Long term</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">Logbook App</span><span class="badge planned">Planned</span></div>
+      <div class="proj-meta">iOS/Mac · App Store</div>
+      <div class="proj-rev">€9.99/mj · 500u = 5k€/mj</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">Marine Servis App</span><span class="badge planned">Planned</span></div>
+      <div class="proj-meta">iOS · App Store</div>
+      <div class="proj-rev">€4.99 one-time / freemium</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">Path Voda</span><span class="badge planned">Planned</span></div>
+      <div class="proj-meta">Premium water · ALU packaging</div>
+      <div class="proj-rev">Q3 2026 launch</div>
+    </div>
+
+    <div class="project-item">
+      <div class="proj-header"><span class="proj-name">AI Automation (HR SME)</span><span class="badge planned">Planned</span></div>
+      <div class="proj-meta">Chatbots · n8n · Split firms</div>
+      <div class="proj-rev">€1k-5k/klijentu</div>
+    </div>
+  </div>
+
+  <!-- MIDDLE: TASKS -->
+  <div class="col">
+    <div class="section-head">Active Tasks</div>
+
+    <!-- AGENDA 55 WEB -->
+    <div class="task-group">
+      <div class="task-group-title"><span>🚢 Agenda 55 — Go Live</span><span class="badge urgent">This Week</span></div>
+      
+      <div class="task priority-high">
+        <div class="task-check done"></div>
+        <div class="task-body"><div class="task-title done-text">Hero photo + gallery with real photos</div></div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check done"></div>
+        <div class="task-body"><div class="task-title done-text">Crew profiles (Vedran + Hana)</div></div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check done"></div>
+        <div class="task-body"><div class="task-title done-text">Menu photo grid + expandable text</div></div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check done"></div>
+        <div class="task-body"><div class="task-title done-text">New amenities (scooters, projector, etc.)</div></div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Upload to agenda-55.com via cPanel</div>
+          <div class="task-detail">Need cPanel credentials from Shuba</div>
+        </div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">SEO meta tags + schema.org for AI search</div>
+          <div class="task-detail"><span class="task-tag">SEO</span>Structured data for AI assistants</div>
+        </div>
+      </div>
+      <div class="task priority-med">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Google Analytics / Search Console setup</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VEGAN SAILING -->
+    <div class="task-group">
+      <div class="task-group-title"><span>🌿 Vegan Sailing Reaktivacija</span><span class="badge building">Building</span></div>
+      
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Kontaktirati Mateu i Marinu — potvrda dostupnosti</div>
+          <div class="task-detail">6 termina u 2026, brod u najmu</div>
+        </div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Landing page vegan sailing (under Unda Mora)</div>
+          <div class="task-detail">Xody gradi tonight</div>
+        </div>
+      </div>
+      <div class="task priority-med">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Booking form / WhatsApp CTA</div>
+        </div>
+      </div>
+      <div class="task priority-med">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Email campaign na prošle klijente Alvus</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPS -->
+    <div class="task-group">
+      <div class="task-group-title"><span>📱 Apps — Research Tonight</span><span class="badge planned">Tonight</span></div>
+      
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Logbook App — market research + competitor analysis</div>
+          <div class="task-detail"><span class="task-tag">Xody tonight</span>App Store category, pricing, features</div>
+        </div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Marine Service App — market research + MVP spec</div>
+          <div class="task-detail"><span class="task-tag">Xody tonight</span>Service intervals, inventory, crew</div>
+        </div>
+      </div>
+      <div class="task priority-med">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Prototype MVP — SwiftUI for iOS + Mac</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UNDA MORA -->
+    <div class="task-group">
+      <div class="task-group-title"><span>🌊 Unda Mora Website</span><span class="badge building">Building</span></div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body"><div class="task-title">Finalize logo (V3 spiral wave in O)</div><div class="task-detail">Need designer or Illustrator file</div></div>
+      </div>
+      <div class="task priority-high">
+        <div class="task-check"></div>
+        <div class="task-body"><div class="task-title">Choose final design (V1/V2/V3)</div></div>
+      </div>
+      <div class="task priority-med">
+        <div class="task-check"></div>
+        <div class="task-body"><div class="task-title">Upload to undamora.com</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: FINANCE + QUESTIONS -->
+  <div class="col">
+    <div class="section-head">Revenue Tracker</div>
+    
+    <div class="metric-card">
+      <div class="metric-label">Q2 Car Investment</div>
+      <div class="metric-value" style="color:var(--red)">-€26,000</div>
+      <div class="metric-sub">Recover in 3 months via bookings</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Year Target</div>
+      <div class="metric-value">€100,000</div>
+      <div class="metric-sub">9 months remaining</div>
+      <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+      <div style="font-size:10px;color:var(--grey);margin-top:6px">€0 / €100,000 confirmed</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Agenda 55 — Potential</div>
+      <div class="metric-value" style="color:var(--teal)">€210k</div>
+      <div class="metric-sub">7 open weeks × ~30k€ avg</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Vegan Sailing — Potential</div>
+      <div class="metric-value" style="color:var(--teal)">€30k</div>
+      <div class="metric-sub">2 weeks × ~15k€ net</div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-label">Apps — Potential (Y1)</div>
+      <div class="metric-value" style="color:var(--gold)">€20-60k</div>
+      <div class="metric-sub">Logbook + Service app · App Store</div>
+    </div>
+
+    <div class="section-head" style="margin-top:0">Open Questions for Shuba</div>
+
+    <div class="q-item">
+      <div class="q-tag">Agenda 55 Web</div>
+      <div class="q-text">cPanel credentials for agenda-55.com to deploy live?</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Vegan Sailing</div>
+      <div class="q-text">Matea i Marina — jesu li dostupne za 2026 sezonu? Kontakt?</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Unda Mora Logo</div>
+      <div class="q-text">Imaš li pristup Illustratoru ili poznaješ dizajnera za finalizaciju loga?</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Logbook App</div>
+      <div class="q-text">Koristiš li Seanapps — integracija ili novi standalone app?</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Logbook App</div>
+      <div class="q-text">Samo za Agenda 55 ili prodaješ svim skipperima? (određuje monetizaciju)</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Path Voda</div>
+      <div class="q-text">Imaš li kontakt za ALU packaging ili punjionicu vode u HR?</div>
+    </div>
+    <div class="q-item">
+      <div class="q-tag">Apple Dev</div>
+      <div class="q-text">Imaš li Apple Developer account ($99/god) za App Store publish?</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function updateClock(){
+  const now=new Date();
+  document.getElementById('clock').textContent=now.toLocaleTimeString('hr-HR',{hour:'2-digit',minute:'2-digit'});
+}
+updateClock();setInterval(updateClock,1000);
+
+// Checkbox toggle
+document.querySelectorAll('.task-check:not(.done)').forEach(cb=>{
+  cb.addEventListener('click',function(){
+    this.classList.toggle('done');
+    const title=this.nextElementSibling.querySelector('.task-title');
+    if(title)title.classList.toggle('done-text');
+  });
+});
+</script>
+</body>
+</html>
