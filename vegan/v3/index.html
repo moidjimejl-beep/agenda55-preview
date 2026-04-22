@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegan Sailing Croatia — Plant-Based. Private. Pioneering.</title>
+  <meta name="description" content="Croatia's original vegan sailing weeks. Private yacht, dedicated plant-based chef. From €1,063/person. Skipper Matea Sedlaček, chef Marina Minko. 6 weeks in 2026.">
+  <meta property="og:title" content="Vegan Sailing Croatia — Plant-Based. Private. Pioneering.">
+  <meta property="og:description" content="Croatia's original vegan sailing weeks. Private yacht, dedicated plant-based chef. From €1,063/person. Skipper Matea Sedlaček, chef Marina Minko. 6 weeks in 2026.">
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://vegan-sailing-croatia.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Vegan Sailing Croatia — Private Plant-Based Sailing Weeks",
+    "description": "Croatia's original private vegan sailing experience. Fully crewed private yacht with dedicated plant-based chef. 6 weeks in 2026 on the Dalmatian coast.",
+    "touristType": "Vegan travellers, sailing enthusiasts, luxury travellers",
+    "itinerary": {
+      "@type": "ItemList",
+      "name": "2026 Season Dates",
+      "itemListElement": [
+        {"@type": "ListItem","position": 1,"name": "Week 1: 13–20 June 2026"},
+        {"@type": "ListItem","position": 2,"name": "Week 2: 18–25 July 2026"},
+        {"@type": "ListItem","position": 3,"name": "Week 3: 25 July–1 August 2026"},
+        {"@type": "ListItem","position": 4,"name": "Week 4: 15–22 August 2026"},
+        {"@type": "ListItem","position": 5,"name": "Week 5: 22–29 August 2026"},
+        {"@type": "ListItem","position": 6,"name": "Week 6: 19–26 September 2026"}
+      ]
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Unda Mora Yachting",
+      "url": "https://unda-mora.vercel.app",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Starogradska ulica 10",
+        "addressLocality": "Koprivnica",
+        "postalCode": "48000",
+        "addressCountry": "HR"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "8500",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0A0A0A;
+      --white: #FFFFFF;
+      --terracotta: #C4622D;
+      --terracotta-hover: #D4723D;
+      --text-secondary: #6B6B6B;
+      --text-secondary-dark: #B0B0B0;
+      --border-white: #E0E0E0;
+      --border-dark: #2A2A2A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* UTILITIES */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+    }
+
+    /* NAV */
+    #main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-vsc {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--terracotta);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-logo-full {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--white);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--terracotta);
+      border-bottom-color: var(--terracotta);
+    }
+
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 1024px) {
+      .nav-logo-full { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner { padding: 0 20px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 0;
+        border-bottom: 1px solid var(--border-dark);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border-dark); }
+      .nav-links a {
+        display: block;
+        padding: 14px 0;
+        font-size: 0.9rem;
+        border-bottom: none;
+      }
+    }
+
+    /* SECTIONS — full bleed */
+    section {
+      width: 100%;
+      position: relative;
+    }
+
+    section.dark { background: var(--black); }
+    section.light { background: var(--white); }
+
+    /* FADE IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in.delay-1 { transition-delay: 0.1s; }
+    .fade-in.delay-2 { transition-delay: 0.2s; }
+    .fade-in.delay-3 { transition-delay: 0.3s; }
+    .fade-in.delay-4 { transition-delay: 0.4s; }
+
+    /* PHOTO PLACEHOLDER */
+    .photo-placeholder {
+      background: #111111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        #161616,
+        #161616 10px,
+        #111111 10px,
+        #111111 20px
+      );
+    }
+
+    .photo-placeholder span {
+      position: relative;
+      z-index: 1;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 12px 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* HERO */
+    #hero {
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #0A0A0A 0%, #1a1008 50%, #0A0A0A 100%);
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        #0d0d0d,
+        #0d0d0d 20px,
+        #0A0A0A 20px,
+        #0A0A0A 40px
+      );
+      opacity: 0.5;
+    }
+
+    .hero-placeholder-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 24px;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+    }
+
+    .hero-content .container {
+      max-width: 1280px;
+    }
+
+    .hero-tag {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    .hero-h1 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.8rem, 8vw, 7.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+
+    .hero-rule {
+      width: 80px;
+      height: 1px;
+      background: var(--terracotta);
+      margin-bottom: 24px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--terracotta);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      transition: background 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary:hover { background: var(--terracotta-hover); }
+
+    .btn-outline-white {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 36px;
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    .btn-outline-black {
+      display: inline-block;
+      background: transparent;
+      color: var(--black);
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 36px;
+      border: 1px solid var(--black);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline-black:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .hero-content { bottom: 48px; }
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-outline-white { text-align: center; }
+    }
+
+    /* SECTION: STORY */
+    #story {
+      padding: 120px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+
+    .story-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--black);
+      letter-spacing: 0.01em;
+      margin-bottom: 40px;
+    }
+
+    .story-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--black);
+      max-width: 680px;
+    }
+
+    .story-text p + p { margin-top: 20px; }
+
+    .story-text strong {
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .story-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      padding-top: 80px;
+    }
+
+    .stat-item {}
+
+    .stat-number {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: var(--terracotta);
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    .story-photo {
+      height: 320px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 1024px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .story-stats {
+        flex-direction: row;
+        padding-top: 0;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #story { padding: 80px 0; }
+      .story-stats { flex-wrap: wrap; gap: 24px; }
+    }
+
+    /* SECTION: CREW */
+    #crew {
+      padding: 120px 0;
+    }
+
+    .crew-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      margin-bottom: 80px;
+    }
+
+    .crew-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .crew-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .crew-block.reverse {
+      direction: rtl;
+    }
+
+    .crew-block.reverse > * {
+      direction: ltr;
+    }
+
+    .crew-photo {
+      height: 380px;
+    }
+
+    .crew-role {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+
+    .crew-name {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .crew-bio {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--text-secondary-dark);
+      margin-bottom: 24px;
+    }
+
+    .crew-quote {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      padding-left: 20px;
+      border-left: 2px solid var(--terracotta);
+      margin-bottom: 16px;
+    }
+
+    .crew-link {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    .crew-link:hover { color: var(--terracotta-hover); }
+
+    .crew-food-photo {
+      height: 400px;
+    }
+
+    @media (max-width: 1024px) {
+      .crew-grid { grid-template-columns: 1fr; gap: 60px; }
+    }
+
+    @media (max-width: 768px) {
+      #crew { padding: 80px 0; }
+      .crew-block, .crew-block.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+      .crew-h2 { margin-bottom: 48px; }
+    }
+
+    /* SECTION: EXPERIENCE */
+    #experience {
+      padding: 120px 0;
+    }
+
+    .experience-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 64px;
+      max-width: 900px;
+    }
+
+    .experience-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 64px;
+    }
+
+    .experience-col-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-white);
+    }
+
+    .experience-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .experience-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--black);
+    }
+
+    .check-mark {
+      color: var(--terracotta);
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .x-mark {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .experience-pull-quote {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--black);
+      padding: 48px 0;
+      border-top: 1px solid var(--border-white);
+      border-bottom: 1px solid var(--border-white);
+      margin-bottom: 64px;
+    }
+
+    .experience-pull-quote span {
+      color: var(--terracotta);
+    }
+
+    .experience-boat-photo {
+      height: 400px;
+    }
+
+    @media (max-width: 768px) {
+      #experience { padding: 80px 0; }
+      .experience-cols { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    /* SECTION: PRICING */
+    #pricing {
+      padding: 120px 0;
+    }
+
+    .pricing-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3.5rem, 10vw, 9rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      margin-bottom: 16px;
+    }
+
+    .pricing-h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 64px;
+    }
+
+    .pricing-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 32px;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    .pricing-table thead tr {
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .pricing-table th {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      padding: 16px 20px;
+      text-align: left;
+    }
+
+    .pricing-table td {
+      padding: 24px 20px;
+      border-bottom: 1px solid var(--border-dark);
+      vertical-align: middle;
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing-table tr:hover td {
+      background: rgba(255,255,255,0.03);
+    }
+
+    .td-week {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .td-dates {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .td-price {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--terracotta);
+    }
+
+    .td-pp {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-secondary-dark);
+    }
+
+    .badge-available {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      border: 1px solid var(--terracotta);
+      padding: 4px 12px;
+    }
+
+    .badge-soldout {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #e05252;
+      border: 1px solid #e05252;
+      padding: 4px 12px;
+    }
+
+    .pricing-note {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: var(--text-secondary-dark);
+      margin-top: 24px;
+    }
+
+    @media (max-width: 768px) {
+      #pricing { padding: 80px 0; }
+    }
+
+    /* SECTION: WHY PRIVATE */
+    #why-private {
+      padding: 120px 0;
+    }
+
+    .why-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 64px;
+      max-width: 800px;
+    }
+
+    .comparison-table-wrap {
+      overflow-x: auto;
+      margin-bottom: 80px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+
+    .comparison-table th {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 20px;
+      text-align: left;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .comparison-table th.highlight {
+      background: var(--terracotta);
+      color: var(--white);
+    }
+
+    .comparison-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border-white);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .comparison-table td.highlight {
+      color: var(--black);
+      font-weight: 600;
+      background: rgba(196, 98, 45, 0.04);
+    }
+
+    .comparison-table td.row-label {
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .why-pull-quote {
+      background: var(--black);
+      padding: 64px;
+    }
+
+    .why-pull-quote p {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      line-height: 1.4;
+      color: var(--white);
+    }
+
+    .why-pull-quote cite {
+      display: block;
+      margin-top: 24px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-style: normal;
+    }
+
+    @media (max-width: 768px) {
+      #why-private { padding: 80px 0; }
+      .why-pull-quote { padding: 40px 20px; }
+    }
+
+    /* SECTION: NEWS */
+    #news {
+      padding: 120px 0;
+    }
+
+    .news-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 64px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .news-card {
+      background: #141414;
+      padding: 48px;
+      border: 1px solid var(--border-dark);
+    }
+
+    .news-date {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 16px;
+    }
+
+    .news-title {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .news-excerpt {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-secondary-dark);
+    }
+
+    @media (max-width: 768px) {
+      #news { padding: 80px 0; }
+      .news-grid { grid-template-columns: 1fr; }
+      .news-card { padding: 32px 24px; }
+    }
+
+    /* SECTION: CONTACT */
+    #contact {
+      padding: 120px 0;
+    }
+
+    .contact-h2 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 64px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 40px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+    }
+
+    .form-group label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--border-white);
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--black);
+      padding: 10px 0;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+    }
+
+    .form-group select {
+      cursor: pointer;
+      background: var(--white);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-bottom-color: var(--terracotta);
+    }
+
+    .btn-submit {
+      background: var(--terracotta);
+      color: var(--white);
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 20px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+
+    .btn-submit:hover { background: var(--terracotta-hover); }
+
+    .contact-info {
+      padding-top: 80px;
+    }
+
+    .contact-info-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .contact-info-value {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: var(--black);
+      margin-bottom: 40px;
+      word-break: break-all;
+    }
+
+    .contact-info-value a {
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-white);
+      transition: border-color 0.2s;
+    }
+
+    .contact-info-value a:hover {
+      border-bottom-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    @media (max-width: 1024px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-info { padding-top: 0; }
+    }
+
+    @media (max-width: 768px) {
+      #contact { padding: 80px 0; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+    }
+
+    /* FOOTER */
+    #main-footer {
+      background: var(--black);
+      border-top: 1px solid var(--border-dark);
+      padding: 80px 0 40px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-logo-tagline {}
+
+    .footer-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-vsc {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--terracotta);
+    }
+
+    .footer-logo-name {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .footer-tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-secondary-dark);
+      max-width: 240px;
+    }
+
+    .footer-col-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-secondary-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-dark);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-legal-links a:hover { color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 1024px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* WHATSAPP FAB */
+    #whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    #whatsapp-fab:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+    }
+
+    #whatsapp-fab svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* COOKIE BANNER */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: var(--black);
+      border-top: 1px solid var(--border-dark);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    #cookie-banner.visible { transform: translateY(0); }
+
+    .cookie-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: var(--text-secondary-dark);
+      flex: 1;
+    }
+
+    .cookie-text a {
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .cookie-btn-accept {
+      background: var(--terracotta);
+      color: var(--white);
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cookie-btn-accept:hover { background: var(--terracotta-hover); }
+
+    .cookie-btn-decline {
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid var(--border-dark);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .cookie-btn-decline:hover {
+      border-color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 768px) {
+      #cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+      .cookie-buttons { width: 100%; }
+      .cookie-btn-accept, .cookie-btn-decline { flex: 1; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <p class="cookie-text">
+      We use cookies to improve your experience. Read our <a href="cookie-policy.html">Cookie Policy</a> and <a href="privacy-policy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button class="cookie-btn-decline" id="cookie-decline">Decline</button>
+      <button class="cookie-btn-accept" id="cookie-accept">Accept All</button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Vegan Sailing Croatia home">
+        <span class="nav-logo-vsc">VSC</span>
+        <span class="nav-logo-full">Vegan Sailing Croatia</span>
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#crew">The Crew</a></li>
+        <li><a href="#pricing">Dates &amp; Prices</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="dark" aria-label="Hero">
+    <div class="hero-bg"></div>
+    <div class="hero-placeholder-label">HERO: Sailboat at sunset, Dalmatian coast</div>
+    <div class="hero-content">
+      <div class="container">
+        <p class="hero-tag">Est. 2020</p>
+        <h1 class="hero-h1">Plant-Based.<br>Fully Crewed.<br>Entirely Yours.</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-subtitle">Croatia's original private vegan sailing experience — the crew who invented it, now exclusively through Unda Mora Yachting.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Enquire Now</a>
+          <a href="#pricing" class="btn-outline-white">Available Dates ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="light" aria-label="Our story">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <p class="story-eyebrow fade-in">Our Story</p>
+          <h2 class="story-h2 fade-in delay-1">The Crew Who Invented It.</h2>
+          <div class="story-text fade-in delay-2">
+            <p>In 2020, while the sailing world was standing still, two women from inland Croatia had an idea. Matea Sedlaček — one of the few female skippers on the Adriatic — and her girlfriend Marina Minko, a plant-based chef building her professional career, decided to connect the two things they loved: sailing the Dalmatian islands and eating extraordinarily well.</p>
+            <p>They launched Croatia's first vegan sailing week with Alvus Sailing. It sold out. The next year sold out. Every year since has sold out.</p>
+            <p>For 2026, they sail exclusively through <strong>Unda Mora Yachting</strong> — your private catamaran or sailboat, your crew, your week on the Adriatic.</p>
+            <p>This is not a retreat. This is not a group tour. This is the original — and the best.</p>
+          </div>
+          <div class="photo-placeholder story-photo fade-in delay-3" role="img" aria-label="Croatian islands from the sea">
+            <span>PHOTO: Croatian islands from the sea</span>
+          </div>
+        </div>
+        <div class="story-stats fade-in delay-2">
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Years Running</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Sold Out Every Year</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">2026</div>
+            <div class="stat-label">This Season</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREW -->
+  <section id="crew" class="dark" aria-label="Your crew">
+    <div class="container">
+      <h2 class="crew-h2 fade-in">Your Crew.</h2>
+      <div class="crew-grid">
+        <!-- Matea -->
+        <div class="crew-block fade-in">
+          <div class="photo-placeholder crew-photo" role="img" aria-label="Skipper Matea Sedlaček">
+            <span>PHOTO: Matea Sedlaček, Skipper</span>
+          </div>
+          <div>
+            <p class="crew-role">Skipper</p>
+            <h3 class="crew-name">Matea Sedlaček</h3>
+            <p class="crew-bio">Matea is a professional skipper, fitness entrepreneur, and one of a handful of female captains on the Adriatic. Originally from Kutina, she first encountered sailing at the Faculty of Kinesiology in Zagreb — and never looked back. She's been working as a skipper since 2014 and has since built a reputation as a captain guests trust completely.</p>
+            <blockquote class="crew-quote">"Every week I'm more or less amazed how I, quite small and young, can drive such a big boat. Every successful entry was greeted with applause — because it is something that isn't expected from a woman."</blockquote>
+            <blockquote class="crew-quote">"Our goal is to show people what veganism is really all about — breaking down prejudices about veganism, which is still seen as some sectarian way of life."</blockquote>
+          </div>
+        </div>
+        <!-- Marina -->
+        <div class="crew-block reverse fade-in delay-2">
+          <div class="photo-placeholder crew-photo" role="img" aria-label="Chef Marina Minko">
+            <span>PHOTO: Marina Minko, Chef</span>
+          </div>
+          <div>
+            <p class="crew-role">Chef</p>
+            <h3 class="crew-name">Marina Minko</h3>
+            <p class="crew-bio">Marina is a self-taught executive plant-based chef with experience across European restaurant kitchens, vegan cruises, and hotel consulting. She has published 100+ food columns, led professional culinary teams, and built a career around a single conviction: bold, modern plant-based food that genuinely excites guests — including those who've never considered veganism.</p>
+            <p class="crew-bio">Her menus are seasonal, sourced fresh from island markets, and designed to surprise.</p>
+            <a href="https://www.marinaminko.com" class="crew-link" target="_blank" rel="noopener">marinaminko.com →</a>
+          </div>
+        </div>
+      </div>
+      <div class="photo-placeholder crew-food-photo fade-in" role="img" aria-label="Plant-based dish, overhead shot">
+        <span>PHOTO: Plant-based dish, overhead shot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="light" aria-label="What's included">
+    <div class="container">
+      <h2 class="experience-h2 fade-in">Everything Included. Nothing Held Back.</h2>
+      <div class="experience-cols">
+        <div class="fade-in delay-1">
+          <p class="experience-col-title">Included</p>
+          <ul class="experience-list" aria-label="Included in price">
+            <li><span class="check-mark" aria-hidden="true">✓</span> Private yacht — sailboat or catamaran</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Professional skipper for the full week</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Dedicated plant-based chef — 3 meals per day</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> All provisioning: food, water, juices, snacks</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Fuel costs</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Up to 2 marina / mooring fees</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Tourist tax for all guests</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Charter pack — bedding, towels, cleaning</li>
+            <li><span class="check-mark" aria-hidden="true">✓</span> Island-hopping itinerary in the Croatian Adriatic</li>
+          </ul>
+        </div>
+        <div class="fade-in delay-2">
+          <p class="experience-col-title">Not Included</p>
+          <ul class="experience-list" aria-label="Not included in price">
+            <li><span class="x-mark" aria-hidden="true">✕</span> Flights / transfers to marina</li>
+            <li><span class="x-mark" aria-hidden="true">✕</span> Alcoholic beverages (available at extra cost)</li>
+            <li><span class="x-mark" aria-hidden="true">✕</span> Restaurant meals on shore</li>
+            <li><span class="x-mark" aria-hidden="true">✕</span> National park entrance fees (Kornati, Mljet etc.)</li>
+            <li><span class="x-mark" aria-hidden="true">✕</span> Optional excursions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="experience-pull-quote fade-in">
+        "Because luxury begins at <span>the table.</span>"
+      </div>
+      <div class="photo-placeholder experience-boat-photo fade-in" role="img" aria-label="Catamaran interior or deck">
+        <span>PHOTO: Catamaran interior or deck</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="dark" aria-label="Dates and pricing">
+    <div class="container">
+      <h2 class="pricing-h2 fade-in">Six Weeks.</h2>
+      <p class="pricing-h3 fade-in delay-1">Eight guests. First enquiry holds the date.</p>
+      <div class="pricing-table-wrap fade-in delay-2">
+        <table class="pricing-table" aria-label="2026 availability and pricing">
+          <thead>
+            <tr>
+              <th scope="col">Week</th>
+              <th scope="col">Dates</th>
+              <th scope="col">Charter Fee</th>
+              <th scope="col">Per Person (8 guests)</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="pricing-tbody">
+            <tr>
+              <td class="td-week">Week 1</td>
+              <td class="td-dates">13–20 June 2026</td>
+              <td class="td-price">€8,500</td>
+              <td class="td-pp">~€1,063 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+            <tr>
+              <td class="td-week">Week 2</td>
+              <td class="td-dates">18–25 July 2026</td>
+              <td class="td-price">€10,500</td>
+              <td class="td-pp">~€1,313 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+            <tr>
+              <td class="td-week">Week 3</td>
+              <td class="td-dates">25 July–1 Aug 2026</td>
+              <td class="td-price">€12,000</td>
+              <td class="td-pp">~€1,500 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+            <tr>
+              <td class="td-week">Week 4</td>
+              <td class="td-dates">15–22 Aug 2026</td>
+              <td class="td-price">€12,000</td>
+              <td class="td-pp">~€1,500 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+            <tr>
+              <td class="td-week">Week 5</td>
+              <td class="td-dates">22–29 Aug 2026</td>
+              <td class="td-price">€11,000</td>
+              <td class="td-pp">~€1,375 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+            <tr>
+              <td class="td-week">Week 6</td>
+              <td class="td-dates">19–26 Sep 2026</td>
+              <td class="td-price">€8,500</td>
+              <td class="td-pp">~€1,063 / person</td>
+              <td><span class="badge-available">Available</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pricing-note fade-in">Prices for full vessel. Min 2 guests, max 8. 50% deposit secures your week. Full <a href="terms.html" style="color:var(--terracotta);">T&amp;C</a> apply.</p>
+    </div>
+  </section>
+
+  <!-- WHY PRIVATE -->
+  <section id="why-private" class="light" aria-label="Why private changes everything">
+    <div class="container">
+      <h2 class="why-h2 fade-in">Why Private Changes Everything.</h2>
+      <div class="comparison-table-wrap fade-in delay-1">
+        <table class="comparison-table" aria-label="Comparison with competitors">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="highlight">Vegan Sailing Croatia</th>
+              <th scope="col">Funky Tours</th>
+              <th scope="col">GoXperience</th>
+              <th scope="col">World Vegan Travel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="row-label">Type</td>
+              <td class="highlight">Private yacht</td>
+              <td>Shared cabin</td>
+              <td>Shared cabin</td>
+              <td>Luxury cruise</td>
+            </tr>
+            <tr>
+              <td class="row-label">Vegan</td>
+              <td class="highlight">Dedicated chef</td>
+              <td>On request only</td>
+              <td>Not available</td>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <td class="row-label">Per Person</td>
+              <td class="highlight">€1,063–€1,500</td>
+              <td>€1,495</td>
+              <td>€1,200–€1,800</td>
+              <td>€4,000–€5,500</td>
+            </tr>
+            <tr>
+              <td class="row-label">Boat</td>
+              <td class="highlight">Yours alone</td>
+              <td>Shared</td>
+              <td>Shared</td>
+              <td>29-cabin ship</td>
+            </tr>
+            <tr>
+              <td class="row-label">Itinerary</td>
+              <td class="highlight">You choose</td>
+              <td>Fixed</td>
+              <td>Fixed</td>
+              <td>Fixed</td>
+            </tr>
+            <tr>
+              <td class="row-label">Chef</td>
+              <td class="highlight">Dedicated vegan chef</td>
+              <td>None</td>
+              <td>Shared</td>
+              <td>Celebrity host</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="why-pull-quote fade-in delay-2">
+        <p>"The world's top group vegan sailing tours charge €4,000–€5,500 per person — on shared boats, with shared itineraries. Our private option gives you the whole boat, a dedicated vegan crew, and complete freedom — at a fraction of the per-person cost when you fill your group."</p>
+        <cite>— Vegan Sailing Croatia</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="dark" aria-label="News from the deck">
+    <div class="container">
+      <h2 class="news-h2 fade-in">From the Deck.</h2>
+      <div class="news-grid" id="news-grid">
+        <article class="news-card fade-in delay-1">
+          <p class="news-date">April 2026</p>
+          <h3 class="news-title">2026 Season Announced — Six Weeks, Eight Guests Each</h3>
+          <p class="news-excerpt">After another sold-out season in 2025, Matea and Marina return exclusively with Unda Mora Yachting for six weeks of private plant-based sailing across the Dalmatian islands. Dates from June to September.</p>
+        </article>
+        <article class="news-card fade-in delay-2">
+          <p class="news-date">March 2026</p>
+          <h3 class="news-title">Marina Minko Named Among Croatia's Top Plant-Based Chefs</h3>
+          <p class="news-excerpt">Our executive vegan chef Marina Minko continues to make waves in the Croatian culinary scene, with her island market menus praised for proving that plant-based food belongs on luxury vessels.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="light" aria-label="Contact and enquiry">
+    <div class="container">
+      <h2 class="contact-h2 fade-in">Make Your Enquiry.</h2>
+      <div class="contact-grid">
+        <form class="contact-form fade-in delay-1" id="enquiry-form" action="mailto:vegan@unda-mora.com" method="post" enctype="text/plain" aria-label="Enquiry form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+44 7700 000000">
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <select id="guests" name="guests">
+                <option value="">Select guests</option>
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+                <option value="7">7 guests</option>
+                <option value="8">8 guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="week">Preferred Week</label>
+            <select id="week" name="week">
+              <option value="">Select preferred week</option>
+              <option value="week1">Week 1 — 13–20 June 2026</option>
+              <option value="week2">Week 2 — 18–25 July 2026</option>
+              <option value="week3">Week 3 — 25 July–1 Aug 2026</option>
+              <option value="week4">Week 4 — 15–22 Aug 2026</option>
+              <option value="week5">Week 5 — 22–29 Aug 2026</option>
+              <option value="week6">Week 6 — 19–26 Sep 2026</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your group, dietary requirements, or any questions..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send →</button>
+        </form>
+        <div class="contact-info fade-in delay-2">
+          <p class="contact-info-label">Email</p>
+          <p class="contact-info-value"><a href="mailto:vegan@unda-mora.com">vegan@unda-mora.com</a></p>
+          <p class="contact-info-label">WhatsApp</p>
+          <p class="contact-info-value"><a href="https://wa.me/385000000000" target="_blank" rel="noopener">+385 00 000 0000</a></p>
+          <p class="contact-info-label">Website</p>
+          <p class="contact-info-value"><a href="https://unda-mora.vercel.app" target="_blank" rel="noopener">unda-mora.vercel.app</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo-tagline">
+          <div class="footer-logo">
+            <span class="footer-logo-vsc">VSC</span>
+            <span class="footer-logo-name">Vegan Sailing Croatia</span>
+          </div>
+          <p class="footer-tagline">Plant-based. Private. Pioneering. Croatia's original vegan sailing experience since 2020.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#crew">The Crew</a></li>
+            <li><a href="#pricing">Dates &amp; Prices</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Information</p>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://unda-mora.vercel.app" target="_blank" rel="noopener">Unda Mora Yachting</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Legal</p>
+          <ul class="footer-links">
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Vegan Sailing Croatia / Unda mora d.o.o. · Starogradska ulica 10, 48000 Koprivnica, Croatia</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="cookie-policy.html">Cookies</a>
+          <a href="terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a id="whatsapp-fab" href="https://wa.me/385000000000" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    // NAV HAMBURGER
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // COOKIE BANNER
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieDecline = document.getElementById('cookie-decline');
+
+    if (!localStorage.getItem('vsc_cookies_accepted')) {
+      setTimeout(() => cookieBanner.classList.add('visible'), 800);
+    }
+
+    cookieAccept.addEventListener('click', () => {
+      localStorage.setItem('vsc_cookies_accepted', 'true');
+      cookieBanner.classList.remove('visible');
+    });
+
+    cookieDecline.addEventListener('click', () => {
+      localStorage.setItem('vsc_cookies_accepted', 'declined');
+      cookieBanner.classList.remove('visible');
+    });
+
+    // INTERSECTION OBSERVER — fade in
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // LOAD DATA FROM ../admin/data.json
+    async function loadData() {
+      try {
+        const resp = await fetch('../admin/data.json');
+        if (!resp.ok) return;
+        const data = await resp.json();
+
+        // Update pricing
+        if (data.weeks && Array.isArray(data.weeks)) {
+          const tbody = document.getElementById('pricing-tbody');
+          const rows = tbody.querySelectorAll('tr');
+          data.weeks.forEach((week, i) => {
+            if (rows[i] && week.status) {
+              const badge = rows[i].querySelector('.badge-available, .badge-soldout');
+              if (badge) {
+                const soldOut = week.status.toLowerCase().includes('sold');
+                badge.className = soldOut ? 'badge-soldout' : 'badge-available';
+                badge.textContent = soldOut ? 'Sold Out' : 'Available';
+              }
+            }
+          });
+        }
+
+        // Update news
+        if (data.news && Array.isArray(data.news) && data.news.length >= 2) {
+          const grid = document.getElementById('news-grid');
+          grid.innerHTML = '';
+          data.news.slice(0, 2).forEach((item, i) => {
+            const article = document.createElement('article');
+            article.className = `news-card fade-in delay-${i + 1}`;
+            article.innerHTML = `
+              <p class="news-date">${item.date || ''}</p>
+              <h3 class="news-title">${item.title || ''}</h3>
+              <p class="news-excerpt">${item.excerpt || ''}</p>
+            `;
+            grid.appendChild(article);
+          });
+          grid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+      } catch (e) {
+        // Use defaults already in HTML
+      }
+    }
+
+    loadData();
+
+    // FORM HANDLER
+    const form = document.getElementById('enquiry-form');
+    form.addEventListener('submit', (e) => {
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = 'Sending…';
+      setTimeout(() => { btn.textContent = 'Send →'; }, 2000);
+    });
+  </script>
+
+</body>
+</html>
