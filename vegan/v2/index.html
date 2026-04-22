@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegan Sailing Croatia | Plant-Based Private Charter | Unda Mora</title>
+  <meta name="description" content="Croatia's original vegan sailing week. Private catamaran, dedicated plant-based chef Marina Minko, skipper Matea Sedlaček. From €1,063/person. Book your 2026 week.">
+  <link rel="canonical" href="https://vegan-sailing-croatia.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vegan Sailing Croatia | Plant-Based Private Charter | Unda Mora">
+  <meta property="og:description" content="Croatia's original private vegan sailing experience. Private catamaran, dedicated plant-based chef, skipper Matea Sedlaček. From €1,063/person.">
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vegan-sailing-croatia.com/">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org TouristTrip -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Vegan Sailing Croatia — Private Plant-Based Charter Week",
+    "description": "Croatia's original private vegan sailing week. Dedicated plant-based chef, licensed female skipper, fully private catamaran or sailboat on the Adriatic.",
+    "touristType": "VeganTraveler",
+    "itinerary": {
+      "@type": "ItemList",
+      "name": "Dalmatian Islands Sailing Itinerary",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Split / Marina Kaštela"},
+        {"@type": "ListItem", "position": 2, "name": "Hvar"},
+        {"@type": "ListItem", "position": 3, "name": "Vis"},
+        {"@type": "ListItem", "position": 4, "name": "Korčula"},
+        {"@type": "ListItem", "position": 5, "name": "Mljet"}
+      ]
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "8500",
+      "description": "Full vessel from €8,500. Min 2, max 8 guests.",
+      "availability": "https://schema.org/InStock"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Unda mora d.o.o.",
+      "url": "https://unda-mora.vercel.app",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Starogradska ulica 10",
+        "addressLocality": "Koprivnica",
+        "postalCode": "48000",
+        "addressCountry": "HR"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --bg-primary: #F5F0E8;
+      --bg-alt: #EDE7D8;
+      --bg-card: #FFFFFF;
+      --accent: #2D5016;
+      --accent-hover: #3D6B1E;
+      --accent-light: #6B8C42;
+      --text-primary: #1C1C1C;
+      --text-secondary: #4A5568;
+      --text-muted: #718096;
+      --border: rgba(45, 80, 22, 0.15);
+      --green-light-bg: rgba(45, 80, 22, 0.06);
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Lato', sans-serif;
+      --nav-height: 72px;
+      --transition: 0.25s ease;
+      --radius: 4px;
+      --shadow: 0 2px 16px rgba(45,80,22,0.08);
+      --shadow-lg: 0 8px 40px rgba(45,80,22,0.12);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); }
+    ul { list-style: none; }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 1.2; }
+    h1 { font-size: clamp(2.4rem, 6vw, 5rem); font-style: italic; }
+    h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+    h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+    p { margin-bottom: 1rem; }
+    .eyebrow {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .container--narrow { max-width: 840px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 6rem 0; }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .btn--primary { background: var(--accent); color: #fff; }
+    .btn--primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(45,80,22,0.3); }
+    .btn--outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+    .btn--outline:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
+    .btn--outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
+    .btn--outline-light:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+    /* ===== PHOTO PLACEHOLDERS ===== */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #7A8C5A 0%, #5A7042 35%, #3D5828 70%, #2A3D1A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.75);
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* ===== FADE IN ANIMATION ===== */
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+
+    /* ===== COOKIE BANNER ===== */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      background: #FFFFF8;
+      border-top: 2px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      box-shadow: 0 -4px 20px rgba(45,80,22,0.08);
+    }
+    #cookie-banner p { margin: 0; font-size: 0.88rem; color: var(--text-secondary); }
+    #cookie-banner a { color: var(--accent); text-decoration: underline; }
+    .cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-btn {
+      padding: 0.55rem 1.25rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: 2px solid var(--accent);
+      font-family: var(--font-sans);
+      transition: background var(--transition), color var(--transition);
+    }
+    .cookie-btn--accept { background: var(--accent); color: #fff; }
+    .cookie-btn--accept:hover { background: var(--accent-hover); }
+    .cookie-btn--decline { background: transparent; color: var(--accent); }
+    .cookie-btn--decline:hover { background: var(--green-light-bg); }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: var(--nav-height);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    #nav.scrolled { border-bottom-color: var(--border); box-shadow: 0 2px 16px rgba(45,80,22,0.07); }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-logo svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a { font-size: 1rem; color: var(--accent); font-weight: 400; }
+
+    /* ===== HERO ===== */
+    #hero {
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #7A8C5A 0%, #5A7042 20%, #3D5828 50%, #1A2E0E 100%);
+    }
+    .hero-bg-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255,255,255,0.18);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+      pointer-events: none;
+      font-family: var(--font-sans);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      padding-top: var(--nav-height);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.95);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+    }
+    .hero-content h1 {
+      color: #fff;
+      max-width: 720px;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .hero-subtitle {
+      color: rgba(255,255,255,0.88);
+      font-size: 1.1rem;
+      font-weight: 300;
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* ===== STORY ===== */
+    #story { background: var(--bg-primary); }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .story-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .stat-block { text-align: center; }
+    .stat-number { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; color: var(--accent); display: block; line-height: 1; }
+    .stat-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.35rem; }
+    .story-photo { border-radius: 2px; overflow: hidden; }
+    .story-photo .photo-placeholder { height: 480px; border-radius: 2px; }
+
+    /* ===== CREW ===== */
+    #crew { background: var(--bg-alt); }
+    .crew-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .crew-card {
+      background: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .crew-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .crew-card-photo .photo-placeholder { height: 320px; }
+    .crew-card-body { padding: 2rem; }
+    .role-badge {
+      display: inline-block;
+      background: var(--green-light-bg);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: 0.75rem;
+    }
+    .crew-card-body h3 { margin-bottom: 0.75rem; color: var(--text-primary); }
+    .crew-quote {
+      border-left: 3px solid var(--accent-light);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--text-secondary);
+      font-style: italic;
+      font-size: 0.92rem;
+    }
+    .crew-link { color: var(--accent); font-weight: 700; font-size: 0.85rem; text-decoration: underline; }
+    .crew-food-photo { margin-top: 3rem; border-radius: 4px; overflow: hidden; }
+    .crew-food-photo .photo-placeholder { height: 280px; }
+
+    /* ===== EXPERIENCE ===== */
+    #experience { background: var(--bg-primary); }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .experience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      transition: box-shadow var(--transition), border-color var(--transition);
+    }
+    .experience-card:hover { box-shadow: var(--shadow); border-color: var(--accent-light); }
+    .experience-icon { font-size: 1.6rem; margin-bottom: 0.85rem; }
+    .experience-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+    .experience-card p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; }
+    .not-included-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+    .not-included-box h4 { font-family: var(--font-sans); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .not-included-list { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+    .not-included-list li { font-size: 0.88rem; color: var(--text-secondary); position: relative; padding-left: 1.1rem; }
+    .not-included-list li::before { content: '✗'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.75rem; top: 0.1em; }
+    .dietary-note { margin-top: 1.5rem; font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
+
+    /* ===== PRICING ===== */
+    #pricing { background: var(--bg-alt); }
+    .pricing-boat { border-radius: 4px; overflow: hidden; margin-bottom: 3rem; }
+    .pricing-boat .photo-placeholder { height: 300px; }
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .week-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .week-card:hover { box-shadow: var(--shadow); border-color: var(--accent); transform: translateY(-2px); }
+    .week-label { font-family: var(--font-sans); font-weight: 700; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.35rem; }
+    .week-dates { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; }
+    .week-price-charter { font-size: 1.6rem; font-family: var(--font-serif); font-weight: 600; color: var(--accent); margin: 0.5rem 0 0.2rem; }
+    .week-price-pp { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .week-status { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 100px; }
+    .week-status--available { background: rgba(45,80,22,0.1); color: var(--accent); }
+    .week-status--limited { background: rgba(200,120,0,0.1); color: #C87800; }
+    .week-status--sold { background: rgba(150,0,0,0.1); color: #960000; }
+    .pricing-note { margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); }
+    .pricing-cta { text-align: center; margin-top: 3rem; }
+
+    /* ===== WHY PRIVATE ===== */
+    #why-private { background: var(--bg-primary); }
+    .comparison-wrapper { overflow-x: auto; margin-top: 2.5rem; border-radius: 4px; }
+    .comparison-table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .comparison-table th {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--bg-alt);
+      color: var(--text-secondary);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table .col-vsc { background: var(--green-light-bg); border-left: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+    .comparison-table thead .col-vsc { background: var(--accent); color: #fff; border-left: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+    .comparison-table tr:last-child .col-vsc { border-bottom: 2px solid var(--accent); }
+    .comparison-table td:first-child { font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; letter-spacing: 0.05em; }
+    .pull-quote {
+      background: var(--green-light-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.75rem 2rem;
+      margin-top: 3rem;
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--text-primary); margin: 0; line-height: 1.6; }
+
+    /* ===== NEWS ===== */
+    #news { background: var(--bg-alt); }
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .news-card {
+      background: var(--bg-card);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .news-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .news-card-body { padding: 1.75rem; }
+    .news-date { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .news-card h3 { font-size: 1.3rem; margin-bottom: 0.6rem; line-height: 1.3; }
+    .news-excerpt { font-size: 0.9rem; color: var(--text-secondary); margin: 0; }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--bg-primary); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-form { background: var(--bg-card); border-radius: 4px; padding: 2.5rem; box-shadow: var(--shadow); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-primary);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(45,80,22,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit-row { margin-top: 0.5rem; }
+    .form-submit-row .btn { width: 100%; justify-content: center; display: block; text-align: center; }
+    .form-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 1rem; text-align: center; }
+    .form-success {
+      display: none;
+      background: var(--green-light-bg);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      color: var(--accent);
+      font-weight: 700;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .contact-info { padding-top: 0.5rem; }
+    .contact-info h3 { margin-bottom: 1.5rem; }
+    .contact-item { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1.25rem; }
+    .contact-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1em; }
+    .contact-item-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.2rem; }
+    .contact-item-value { font-size: 0.95rem; color: var(--text-primary); }
+    .contact-item-value a { color: var(--accent); }
+    .contact-legal-note { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-muted); }
+    .contact-legal-note a { color: var(--accent); text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: #1A3009;
+      color: rgba(245,240,232,0.85);
+      padding: 4rem 0 2rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: #F5F0E8;
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand p { font-size: 0.85rem; color: rgba(245,240,232,0.65); line-height: 1.6; }
+    .footer-brand .footer-sub { font-size: 0.75rem; color: rgba(245,240,232,0.45); margin-top: 0.5rem; }
+    .footer-col h4 { font-family: var(--font-sans); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.5); margin-bottom: 1rem; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a { font-size: 0.88rem; color: rgba(245,240,232,0.75); transition: color var(--transition); }
+    .footer-col ul li a:hover { color: #F5F0E8; }
+    .footer-bottom {
+      border-top: 1px solid rgba(245,240,232,0.1);
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-copyright { font-size: 0.78rem; color: rgba(245,240,232,0.4); }
+    .footer-legal-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-legal-links a { font-size: 0.78rem; color: rgba(245,240,232,0.5); transition: color var(--transition); }
+    .footer-legal-links a:hover { color: rgba(245,240,232,0.9); }
+
+    /* ===== WHATSAPP FAB ===== */
+    #whatsapp-fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      z-index: 998;
+      transition: transform var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+    }
+    #whatsapp-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    #whatsapp-fab svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header { margin-bottom: 1rem; }
+    .section-header h2 { margin-top: 0.5rem; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .story-photo { order: -1; }
+      .experience-grid { grid-template-columns: repeat(2, 1fr); }
+      .weeks-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 4rem 0; }
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .crew-grid { grid-template-columns: 1fr; }
+      .experience-grid { grid-template-columns: 1fr; }
+      .weeks-grid { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .story-stats { gap: 1.5rem; }
+      .comparison-table th, .comparison-table td { padding: 0.75rem 0.85rem; font-size: 0.82rem; }
+      #whatsapp-fab { bottom: 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" role="alert" aria-live="polite">
+    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn--decline" id="cookie-decline">Decline</button>
+      <button class="cookie-btn cookie-btn--accept" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Vegan Sailing Croatia home">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C12 2 6 8 6 14a6 6 0 0012 0c0-6-6-12-6-12z" fill="#2D5016" opacity="0.3"/>
+          <path d="M12 2C12 2 6 8 6 14a6 6 0 0012 0c0-6-6-12-6-12z" stroke="#2D5016" stroke-width="1.5" fill="none"/>
+          <path d="M12 14V22M9 11c1 1 2 2 3 3M15 9c-1 2-2 3.5-3 5" stroke="#2D5016" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Vegan Sailing Croatia
+      </a>
+      <div class="nav-links" role="list">
+        <a href="index.html" role="listitem">Home</a>
+        <a href="#story" role="listitem">Our Story</a>
+        <a href="#crew" role="listitem">The Crew</a>
+        <a href="#pricing" role="listitem">Dates &amp; Prices</a>
+        <a href="faq.html" role="listitem">FAQ</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="#story">Our Story</a>
+    <a href="#crew">The Crew</a>
+    <a href="#pricing">Dates &amp; Prices</a>
+    <a href="faq.html">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <div class="hero-bg-label">HERO: Sailboat at sunset, Dalmatian coast</div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">🌿 Croatia's Original — Since 2020</div>
+        <h1>Plant-Based.<br>Fully Crewed.<br>Entirely Yours.</h1>
+        <p class="hero-subtitle">Croatia's original private vegan sailing experience — the crew who invented it, now exclusively through Unda Mora Yachting.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn--primary">Enquire for 2026</a>
+          <a href="#pricing" class="btn btn--outline-light">See Available Dates ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STORY -->
+    <section id="story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-text fade-in">
+            <div class="section-header">
+              <span class="eyebrow">The Story</span>
+              <h2>How Two Women from Inland Croatia Invented Vegan Sailing</h2>
+            </div>
+            <p>In 2020, while the sailing world was standing still, two women from inland Croatia had an idea. Matea Sedlaček — one of the few female skippers on the Adriatic — and her girlfriend Marina Minko, a plant-based chef building her professional career, decided to connect the two things they loved: sailing the Dalmatian islands and eating extraordinarily well.</p>
+            <p>They launched Croatia's first vegan sailing week with Alvus Sailing. It sold out. The next year sold out. Every year since has sold out.</p>
+            <p>For 2026, they sail exclusively through <strong>Unda Mora Yachting</strong> — your private catamaran or sailboat, your crew, your week on the Adriatic.</p>
+            <p>This is not a retreat. This is not a group tour. This is the original — and the best.</p>
+            <div class="story-stats">
+              <div class="stat-block">
+                <span class="stat-number">2020</span>
+                <span class="stat-label">Since</span>
+              </div>
+              <div class="stat-block">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Sold Out Every Season</span>
+              </div>
+              <div class="stat-block">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Weeks in 2026</span>
+              </div>
+            </div>
+          </div>
+          <div class="story-photo fade-in fade-in-delay-2">
+            <div class="photo-placeholder" style="height:480px;" role="img" aria-label="Croatian islands from the sea">
+              PHOTO: Croatian islands from the sea
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CREW -->
+    <section id="crew">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">Meet Your Crew</span>
+          <h2>Your Captain and Your Chef</h2>
+        </div>
+        <div class="crew-grid">
+          <!-- Matea -->
+          <article class="crew-card fade-in fade-in-delay-1">
+            <div class="crew-card-photo">
+              <div class="photo-placeholder" role="img" aria-label="Matea Sedlaček on deck, sailing">
+                PHOTO: Matea Sedlaček on deck, sailing
+              </div>
+            </div>
+            <div class="crew-card-body">
+              <span class="role-badge">⚓ Skipper</span>
+              <h3>Matea Sedlaček</h3>
+              <p>Matea is a professional skipper, fitness entrepreneur, and one of a handful of female captains on the Adriatic. Originally from Kutina, she first encountered sailing at the Faculty of Kinesiology in Zagreb — and never looked back. She's been working as a skipper since 2014, was discovered by a German travel agency specialising in sailing, and has since built a reputation as a captain guests trust completely.</p>
+              <blockquote class="crew-quote">"Every week I'm more or less amazed how I, quite small and young, can drive such a big boat. Every successful entry was greeted with applause — because it is something that isn't expected from a woman."</blockquote>
+              <blockquote class="crew-quote">"Our goal is to show people what veganism is really all about — breaking down prejudices about veganism, which is still seen as some sectarian way of life."</blockquote>
+              <p>She explains the route, offers options, teaches those who want to learn, and handles everything on deck so her guests can simply enjoy being at sea.</p>
+            </div>
+          </article>
+          <!-- Marina -->
+          <article class="crew-card fade-in fade-in-delay-2">
+            <div class="crew-card-photo">
+              <div class="photo-placeholder" role="img" aria-label="Marina Minko cooking and plating food">
+                PHOTO: Marina Minko cooking/plating food
+              </div>
+            </div>
+            <div class="crew-card-body">
+              <span class="role-badge">🌿 Executive Plant-Based Chef</span>
+              <h3>Marina Minko</h3>
+              <p>Marina is a self-taught executive plant-based chef with experience across European restaurant kitchens, vegan cruises, and hotel consulting. She has published 100+ food columns, led professional culinary teams, and built a career around a single conviction: bold, modern plant-based food that genuinely excites guests — including those who've never considered veganism.</p>
+              <p>Her menus are seasonal, sourced fresh from island markets, and designed to surprise.</p>
+              <a href="https://www.marinaminko.com" class="crew-link" target="_blank" rel="noopener">Learn more at marinaminko.com →</a>
+            </div>
+          </article>
+        </div>
+        <div class="crew-food-photo fade-in">
+          <div class="photo-placeholder" style="height:280px;" role="img" aria-label="Plant-based dish, overhead shot">
+            PHOTO: Plant-based dish, overhead shot
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">What's Included</span>
+          <h2>Every Detail Considered</h2>
+        </div>
+        <div class="experience-grid">
+          <div class="experience-card fade-in fade-in-delay-1">
+            <div class="experience-icon" aria-hidden="true">🌿</div>
+            <h3>Plant-Based Gastronomy</h3>
+            <p>Every meal prepared by Marina Minko — fresh, seasonal, sourced from island markets each morning. Full breakfast daily, four lunches, four dinners, continuous snacking.</p>
+          </div>
+          <div class="experience-card fade-in fade-in-delay-2">
+            <div class="experience-icon" aria-hidden="true">⛵</div>
+            <h3>Your Vessel</h3>
+            <p>Sailboat or catamaran — fully private. Catamaran options offer more space and stability; sailboat for a traditional sailing experience. Both entirely yours.</p>
+          </div>
+          <div class="experience-card fade-in fade-in-delay-3">
+            <div class="experience-icon" aria-hidden="true">👩‍✈️</div>
+            <h3>Professional Crew</h3>
+            <p>Matea (licensed skipper) handles all navigation and safety. Marina runs the galley and all hospitality. This is a fully crewed charter — you are guests, not crew.</p>
+          </div>
+          <div class="experience-card fade-in fade-in-delay-1">
+            <div class="experience-icon" aria-hidden="true">🗓️</div>
+            <h3>7 Nights</h3>
+            <p>Embarkation Saturday from 5pm. Disembarkation following Saturday by 9am. A full week on the Adriatic with nothing to manage but your enjoyment.</p>
+          </div>
+          <div class="experience-card fade-in fade-in-delay-2">
+            <div class="experience-icon" aria-hidden="true">🗺️</div>
+            <h3>Island Hopping</h3>
+            <p>Hvar, Vis, Korčula, Mljet, Kornati — your captain curates the route, shaped by your wishes. Every anchorage chosen with care.</p>
+          </div>
+          <div class="experience-card fade-in fade-in-delay-3">
+            <div class="experience-icon" aria-hidden="true">✅</div>
+            <h3>All Provisioning</h3>
+            <p>Food, water, juices, snacks, fuel, marina fees (up to 2), tourist tax, bedding, towels, and cleaning — all included. No hidden extras.</p>
+          </div>
+        </div>
+        <div class="not-included-box fade-in">
+          <h4>Not Included</h4>
+          <ul class="not-included-list">
+            <li>Flights &amp; transfers to marina</li>
+            <li>Alcoholic beverages</li>
+            <li>Restaurant meals on shore</li>
+            <li>National park entrance fees</li>
+            <li>Optional excursions</li>
+          </ul>
+        </div>
+        <p class="dietary-note fade-in">Gluten-free, raw, nut-free requirements accommodated on request. Itinerary curated by your captain, shaped by your wishes.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PRICING -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">2026 Availability</span>
+          <h2>Six Weeks. Your Week.</h2>
+        </div>
+        <div class="pricing-boat fade-in">
+          <div class="photo-placeholder" role="img" aria-label="Catamaran interior or deck">
+            PHOTO: Catamaran interior or deck
+          </div>
+        </div>
+        <div class="weeks-grid" id="weeks-grid">
+          <!-- JS-populated or static fallback -->
+          <div class="week-card fade-in fade-in-delay-1">
+            <div class="week-label">Week 1</div>
+            <div class="week-dates">13–20 June 2026</div>
+            <div class="week-price-charter">€8,500</div>
+            <div class="week-price-pp">~€1,063 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+          <div class="week-card fade-in fade-in-delay-2">
+            <div class="week-label">Week 2</div>
+            <div class="week-dates">18–25 July 2026</div>
+            <div class="week-price-charter">€10,500</div>
+            <div class="week-price-pp">~€1,313 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+          <div class="week-card fade-in fade-in-delay-3">
+            <div class="week-label">Week 3</div>
+            <div class="week-dates">25 Jul–1 Aug 2026</div>
+            <div class="week-price-charter">€12,000</div>
+            <div class="week-price-pp">~€1,500 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+          <div class="week-card fade-in fade-in-delay-1">
+            <div class="week-label">Week 4</div>
+            <div class="week-dates">15–22 Aug 2026</div>
+            <div class="week-price-charter">€12,000</div>
+            <div class="week-price-pp">~€1,500 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+          <div class="week-card fade-in fade-in-delay-2">
+            <div class="week-label">Week 5</div>
+            <div class="week-dates">22–29 Aug 2026</div>
+            <div class="week-price-charter">€11,000</div>
+            <div class="week-price-pp">~€1,375 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+          <div class="week-card fade-in fade-in-delay-3">
+            <div class="week-label">Week 6</div>
+            <div class="week-dates">19–26 Sep 2026</div>
+            <div class="week-price-charter">€8,500</div>
+            <div class="week-price-pp">~€1,063 / person (8 guests)</div>
+            <span class="week-status week-status--available">Available</span>
+          </div>
+        </div>
+        <p class="pricing-note">Prices for full vessel. Min 2 guests, max 8. First enquiry holds the date.</p>
+        <div class="pricing-cta fade-in">
+          <a href="#contact" class="btn btn--primary">Enquire &amp; Check Availability</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WHY PRIVATE -->
+    <section id="why-private">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">Why Private</span>
+          <h2>Why Private Changes Everything</h2>
+        </div>
+        <div class="comparison-wrapper fade-in">
+          <table class="comparison-table" role="table" aria-label="Comparison of vegan sailing options">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" class="col-vsc">Vegan Sailing Croatia</th>
+                <th scope="col">Funky Tours</th>
+                <th scope="col">GoXperience</th>
+                <th scope="col">World Vegan Travel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Type</td>
+                <td class="col-vsc"><strong>Private yacht</strong></td>
+                <td>Shared cabin</td>
+                <td>Shared cabin</td>
+                <td>Luxury cruise</td>
+              </tr>
+              <tr>
+                <td>Vegan</td>
+                <td class="col-vsc"><strong>✅ Dedicated chef</strong></td>
+                <td>On request only</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Per Person</td>
+                <td class="col-vsc"><strong>€1,063–€1,500</strong></td>
+                <td>€1,495</td>
+                <td>€1,200–€1,800</td>
+                <td>€4,000–€5,500</td>
+              </tr>
+              <tr>
+                <td>Boat</td>
+                <td class="col-vsc"><strong>Yours alone</strong></td>
+                <td>Shared</td>
+                <td>Shared</td>
+                <td>29-cabin ship</td>
+              </tr>
+              <tr>
+                <td>Itinerary</td>
+                <td class="col-vsc"><strong>You choose</strong></td>
+                <td>Fixed</td>
+                <td>Fixed</td>
+                <td>Fixed</td>
+              </tr>
+              <tr>
+                <td>Chef</td>
+                <td class="col-vsc"><strong>Dedicated vegan chef</strong></td>
+                <td>None</td>
+                <td>Shared</td>
+                <td>Celebrity host</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pull-quote fade-in">
+          <p>"The world's top group vegan sailing tours charge €4,000–€5,500 per person — on shared boats, with shared itineraries. Our private option gives you the whole boat, a dedicated vegan crew, and complete freedom — at a fraction of the per-person cost when you fill your group."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: NEWS -->
+    <section id="news">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">News &amp; Updates</span>
+          <h2>From the Deck</h2>
+        </div>
+        <div class="news-grid" id="news-grid">
+          <article class="news-card fade-in fade-in-delay-1">
+            <div class="news-card-body">
+              <div class="news-date">1 April 2026</div>
+              <h3>2026 Vegan Sailing Weeks Now Open</h3>
+              <p class="news-excerpt">Six weeks of plant-based sailing on the Adriatic are now available to book for summer 2026.</p>
+            </div>
+          </article>
+          <article class="news-card fade-in fade-in-delay-2">
+            <div class="news-card-body">
+              <div class="news-date">10 April 2026</div>
+              <h3>Meet Your Chef: Marina Minko</h3>
+              <p class="news-excerpt">Get to know the plant-based culinary expert behind every meal on your sailing week.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>We'd love to hear from you</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-form fade-in">
+            <form id="enquiry-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+44 7700 ...">
+                </div>
+                <div class="form-group">
+                  <label for="guests">Number of Guests</label>
+                  <select id="guests" name="guests">
+                    <option value="">Select guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="week">Preferred Week</label>
+                <select id="week" name="week">
+                  <option value="">Select a week</option>
+                  <option value="week1">Week 1 — 13–20 June 2026 (€8,500)</option>
+                  <option value="week2">Week 2 — 18–25 July 2026 (€10,500)</option>
+                  <option value="week3">Week 3 — 25 Jul–1 Aug 2026 (€12,000)</option>
+                  <option value="week4">Week 4 — 15–22 Aug 2026 (€12,000)</option>
+                  <option value="week5">Week 5 — 22–29 Aug 2026 (€11,000)</option>
+                  <option value="week6">Week 6 — 19–26 Sep 2026 (€8,500)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your group, any dietary requirements, questions..."></textarea>
+              </div>
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn--primary">Send Enquiry</button>
+              </div>
+              <p class="form-note">50% deposit secures your week. See <a href="terms.html">Terms &amp; Conditions</a>.</p>
+              <div class="form-success" id="form-success" role="alert">Thank you! Your enquiry has been sent. We'll be in touch within 24 hours.</div>
+            </form>
+          </div>
+          <div class="contact-info fade-in fade-in-delay-2">
+            <h3>Get in touch directly</h3>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value"><a href="mailto:vegan@unda-mora.com">vegan@unda-mora.com</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">💬</span>
+              <div>
+                <div class="contact-item-label">WhatsApp</div>
+                <div class="contact-item-value"><a href="https://wa.me/385000000000" target="_blank" rel="noopener">Message us on WhatsApp</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">🕐</span>
+              <div>
+                <div class="contact-item-label">Response Time</div>
+                <div class="contact-item-value">Within 24 hours</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <div class="contact-item-label">Company</div>
+                <div class="contact-item-value">Unda mora d.o.o.<br>Starogradska ulica 10<br>48000 Koprivnica, Croatia</div>
+              </div>
+            </div>
+            <div class="contact-legal-note">
+              50% deposit secures your week. Final balance due 60 days prior. Full <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a> apply.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <path d="M12 2C12 2 6 8 6 14a6 6 0 0012 0c0-6-6-12-6-12z" fill="rgba(245,240,232,0.3)" stroke="rgba(245,240,232,0.8)" stroke-width="1.5"/>
+              <path d="M12 14V22M9 11c1 1 2 2 3 3M15 9c-1 2-2 3.5-3 5" stroke="rgba(245,240,232,0.8)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Vegan Sailing Croatia
+          </div>
+          <p>Croatia's original private vegan sailing experience. Dedicated plant-based chef, female skipper, fully private vessel on the Adriatic.</p>
+          <p class="footer-sub">Part of <a href="https://unda-mora.vercel.app" style="color:rgba(245,240,232,0.6)" target="_blank" rel="noopener">Unda Mora Yachting</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#crew">The Crew</a></li>
+            <li><a href="#pricing">Dates &amp; Prices</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:vegan@unda-mora.com">vegan@unda-mora.com</a></li>
+            <li><a href="https://unda-mora.vercel.app" target="_blank" rel="noopener">unda-mora.vercel.app</a></li>
+          </ul>
+          <h4 style="margin-top:1.5rem;">Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Vegan Sailing Croatia / Unda mora d.o.o. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/385000000000" id="whatsapp-fab" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script>
+    // ===== 1. NAV SCROLL EFFECT =====
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ===== 2. MOBILE HAMBURGER =====
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileNav = document.getElementById('nav-mobile');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ===== 3. COOKIE BANNER =====
+    const cookieBanner = document.getElementById('cookie-banner');
+    const COOKIE_KEY = 'vsc_cookies_accepted';
+    if (localStorage.getItem(COOKIE_KEY)) {
+      cookieBanner.style.display = 'none';
+    }
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'true');
+      cookieBanner.style.display = 'none';
+    });
+    document.getElementById('cookie-decline').addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'false');
+      cookieBanner.style.display = 'none';
+    });
+
+    // ===== 4. SCROLL FADE-IN =====
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ===== 5. LOAD DATA.JSON =====
+    async function loadData() {
+      try {
+        const res = await fetch('../admin/data.json');
+        if (!res.ok) throw new Error('not found');
+        const data = await res.json();
+
+        // Update weeks if available
+        if (data.weeks && Array.isArray(data.weeks)) {
+          const grid = document.getElementById('weeks-grid');
+          grid.innerHTML = data.weeks.map((w, i) => `
+            <div class="week-card fade-in">
+              <div class="week-label">Week ${i + 1}</div>
+              <div class="week-dates">${w.dates}</div>
+              <div class="week-price-charter">${w.charterFee}</div>
+              <div class="week-price-pp">${w.perPerson} / person (8 guests)</div>
+              <span class="week-status week-status--${(w.status || 'available').toLowerCase()}">${w.status || 'Available'}</span>
+            </div>
+          `).join('');
+          grid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        // Update news if available
+        if (data.news && Array.isArray(data.news)) {
+          const newsGrid = document.getElementById('news-grid');
+          newsGrid.innerHTML = data.news.map((p, i) => `
+            <article class="news-card fade-in fade-in-delay-${i + 1}">
+              <div class="news-card-body">
+                <div class="news-date">${p.date}</div>
+                <h3>${p.title}</h3>
+                <p class="news-excerpt">${p.excerpt}</p>
+              </div>
+            </article>
+          `).join('');
+          newsGrid.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+      } catch (e) {
+        // Silently fall back to static content already in DOM
+      }
+    }
+    loadData();
+
+    // ===== 6. FORM SUBMIT =====
+    const form = document.getElementById('enquiry-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      if (!name || !email) {
+        alert('Please fill in your name and email.');
+        return;
+      }
+      const subject = encodeURIComponent('Vegan Sailing Croatia Enquiry — ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + (form.querySelector('#phone').value || 'not provided') + '\n' +
+        'Guests: ' + (form.querySelector('#guests').value || 'not specified') + '\n' +
+        'Week: ' + (form.querySelector('#week').value || 'not specified') + '\n\n' +
+        'Message:\n' + (form.querySelector('#message').value || '')
+      );
+      window.location.href = 'mailto:vegan@unda-mora.com?subject=' + subject + '&body=' + body;
+      document.getElementById('form-success').style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
